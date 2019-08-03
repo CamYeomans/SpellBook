@@ -118,5 +118,29 @@
   <ItemGroup>
     <None Include="Resources\OpenBook.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Druid1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rogue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fighter1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sorc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

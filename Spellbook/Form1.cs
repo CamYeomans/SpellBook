@@ -70,6 +70,8 @@ namespace Spellbook
             backBtn.Visible = true;
             this.BackgroundImage = Properties.Resources.OpenBook;
             leftpageCharacterCreate.Visible = true;
+            classList.Visible = true;
+            classList.Left = 0;
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -80,12 +82,34 @@ namespace Spellbook
                 backBtn.Visible = false;
                 gamestate = "startmenu";
                 panel2.Visible = true;
+                leftpageCharacterCreate.Width = this.Width;
                 leftpageCharacterCreate.Visible = false;
+                classList.Visible = false;
             }
             
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leftpageCharacterCreate_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void classList_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
