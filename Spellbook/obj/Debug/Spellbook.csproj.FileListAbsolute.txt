@@ -1,0 +1,10 @@
+C:\Users\Cam\source\repos\Spellbook\Spellbook\bin\Debug\Spellbook.exe.config
+C:\Users\Cam\source\repos\Spellbook\Spellbook\bin\Debug\Spellbook.exe
+C:\Users\Cam\source\repos\Spellbook\Spellbook\bin\Debug\Spellbook.pdb
+C:\Users\Cam\source\repos\Spellbook\Spellbook\obj\Debug\Spellbook.csprojAssemblyReference.cache
+C:\Users\Cam\source\repos\Spellbook\Spellbook\obj\Debug\Spellbook.Properties.Resources.resources
+C:\Users\Cam\source\repos\Spellbook\Spellbook\obj\Debug\Spellbook.csproj.GenerateResource.cache
+C:\Users\Cam\source\repos\Spellbook\Spellbook\obj\Debug\Spellbook.csproj.CoreCompileInputs.cache
+C:\Users\Cam\source\repos\Spellbook\Spellbook\obj\Debug\Spellbook.exe
+C:\Users\Cam\source\repos\Spellbook\Spellbook\obj\Debug\Spellbook.pdb
+C:\Users\Cam\source\repos\Spellbook\Spellbook\obj\Debug\Spellbook.spellbookMenu.resources
