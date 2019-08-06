@@ -63,6 +63,16 @@ namespace Spellbook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barb {
+            get {
+                object obj = ResourceManager.GetObject("barb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bard {
             get {
                 object obj = ResourceManager.GetObject("bard", resourceCulture);
@@ -76,6 +86,16 @@ namespace Spellbook.Properties {
         internal static System.Drawing.Bitmap BookClosed {
             get {
                 object obj = ResourceManager.GetObject("BookClosed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cleric {
+            get {
+                object obj = ResourceManager.GetObject("cleric", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +143,16 @@ namespace Spellbook.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paladin {
+            get {
+                object obj = ResourceManager.GetObject("paladin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paper1 {
             get {
                 object obj = ResourceManager.GetObject("paper1", resourceCulture);
@@ -156,6 +186,16 @@ namespace Spellbook.Properties {
         internal static System.Drawing.Bitmap Sorc {
             get {
                 object obj = ResourceManager.GetObject("Sorc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warlock {
+            get {
+                object obj = ResourceManager.GetObject("Warlock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

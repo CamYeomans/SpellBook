@@ -118,8 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="paper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Rogue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rogue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BookClosed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BookClosed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paladin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paladin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ranger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ranger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sorc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sorc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fighter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fighter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Druid1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Druid1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,28 +154,13 @@
   <data name="monk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BookClosed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BookClosed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fighter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fighter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ranger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ranger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cleric" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cleric.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OpenBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OpenBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="paper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sorc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sorc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Warlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warlock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -30,7 +30,7 @@ namespace Spellbook
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            leftpageCharacterCreate.Left = panel2.Width/3; 
+            panel2.Width = this.Width / 2;
         }
 
         private void Title_Click(object sender, EventArgs e)
@@ -71,20 +71,24 @@ namespace Spellbook
             this.BackgroundImage = Properties.Resources.OpenBook;
             leftpageCharacterCreate.Visible = true;
             classList.Visible = true;
-            classList.Left = 0;
+            leftpageCharacterCreate.Left = 250;
+            leftpageCharacterCreate.Top = 60;
+            
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
             if (gamestate.Equals("newChar"))
             {
-                this.BackgroundImage = Properties.Resources.BookClosed;
+                selectedClass.Visible = false;
+                flavortxt.Visible = false;
                 backBtn.Visible = false;
                 gamestate = "startmenu";
                 panel2.Visible = true;
                 leftpageCharacterCreate.Width = this.Width;
                 leftpageCharacterCreate.Visible = false;
                 classList.Visible = false;
+                this.BackgroundImage = Properties.Resources.BookClosed;
             }
             
         }
@@ -111,6 +115,85 @@ namespace Spellbook
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            selectedClass.Text = "The Bard";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Sorcerer";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Wizard";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Ranger";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Monk";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Fighter";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Druid";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Rogue";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Barbarian";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Cleric";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Paladin";
+            selectedClass.Visible = true;
+            flavortxt.Visible = true;
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            selectedClass.Text = "The Warlock";
+            selectedClass.Visible = true;
 
         }
     }
