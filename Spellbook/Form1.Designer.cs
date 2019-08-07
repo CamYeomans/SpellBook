@@ -38,6 +38,12 @@
             this.leftpageCharacterCreate = new System.Windows.Forms.Panel();
             this.pickaclass = new System.Windows.Forms.Label();
             this.classList = new System.Windows.Forms.Panel();
+            this.createCharacter = new System.Windows.Forms.Button();
+            this.levelPanel = new System.Windows.Forms.Panel();
+            this.pickALevel = new System.Windows.Forms.Label();
+            this.levelInput = new System.Windows.Forms.TextBox();
+            this.flavortxt = new System.Windows.Forms.Label();
+            this.selectedClass = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -50,11 +56,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.selectedClass = new System.Windows.Forms.Label();
-            this.flavortxt = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
+            this.levelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -163,10 +168,10 @@
             this.leftpageCharacterCreate.BackColor = System.Drawing.Color.Transparent;
             this.leftpageCharacterCreate.Controls.Add(this.pickaclass);
             this.leftpageCharacterCreate.Controls.Add(this.classList);
-            this.leftpageCharacterCreate.Location = new System.Drawing.Point(37, 39);
+            this.leftpageCharacterCreate.Location = new System.Drawing.Point(5, 36);
             this.leftpageCharacterCreate.Margin = new System.Windows.Forms.Padding(0);
             this.leftpageCharacterCreate.Name = "leftpageCharacterCreate";
-            this.leftpageCharacterCreate.Size = new System.Drawing.Size(797, 708);
+            this.leftpageCharacterCreate.Size = new System.Drawing.Size(869, 845);
             this.leftpageCharacterCreate.TabIndex = 3;
             this.leftpageCharacterCreate.Visible = false;
             this.leftpageCharacterCreate.Paint += new System.Windows.Forms.PaintEventHandler(this.leftpageCharacterCreate_Paint);
@@ -185,9 +190,10 @@
             // classList
             // 
             this.classList.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.classList.AutoScroll = true;
             this.classList.AutoSize = true;
             this.classList.BackColor = System.Drawing.Color.Transparent;
+            this.classList.Controls.Add(this.createCharacter);
+            this.classList.Controls.Add(this.levelPanel);
             this.classList.Controls.Add(this.flavortxt);
             this.classList.Controls.Add(this.selectedClass);
             this.classList.Controls.Add(this.pictureBox12);
@@ -202,12 +208,76 @@
             this.classList.Controls.Add(this.pictureBox3);
             this.classList.Controls.Add(this.pictureBox2);
             this.classList.Controls.Add(this.pictureBox1);
-            this.classList.Location = new System.Drawing.Point(6, 132);
+            this.classList.Location = new System.Drawing.Point(5, 89);
             this.classList.Name = "classList";
-            this.classList.Size = new System.Drawing.Size(788, 574);
+            this.classList.Size = new System.Drawing.Size(861, 753);
             this.classList.TabIndex = 1;
             this.classList.Visible = false;
             this.classList.Paint += new System.Windows.Forms.PaintEventHandler(this.classList_Paint);
+            // 
+            // createCharacter
+            // 
+            this.createCharacter.AutoSize = true;
+            this.createCharacter.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createCharacter.Location = new System.Drawing.Point(350, 680);
+            this.createCharacter.Name = "createCharacter";
+            this.createCharacter.Size = new System.Drawing.Size(199, 47);
+            this.createCharacter.TabIndex = 18;
+            this.createCharacter.Text = "Create character";
+            this.createCharacter.UseVisualStyleBackColor = true;
+            this.createCharacter.Click += new System.EventHandler(this.createCharacter_Click);
+            // 
+            // levelPanel
+            // 
+            this.levelPanel.AutoSize = true;
+            this.levelPanel.Controls.Add(this.pickALevel);
+            this.levelPanel.Controls.Add(this.levelInput);
+            this.levelPanel.Location = new System.Drawing.Point(3, 650);
+            this.levelPanel.Name = "levelPanel";
+            this.levelPanel.Size = new System.Drawing.Size(233, 100);
+            this.levelPanel.TabIndex = 17;
+            // 
+            // pickALevel
+            // 
+            this.pickALevel.AutoSize = true;
+            this.pickALevel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pickALevel.Location = new System.Drawing.Point(-6, 0);
+            this.pickALevel.Name = "pickALevel";
+            this.pickALevel.Size = new System.Drawing.Size(236, 34);
+            this.pickALevel.TabIndex = 16;
+            this.pickALevel.Text = "Enter your level (1-20)";
+            // 
+            // levelInput
+            // 
+            this.levelInput.BackColor = System.Drawing.SystemColors.Info;
+            this.levelInput.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.levelInput.Location = new System.Drawing.Point(0, 37);
+            this.levelInput.Name = "levelInput";
+            this.levelInput.Size = new System.Drawing.Size(230, 38);
+            this.levelInput.TabIndex = 15;
+            // 
+            // flavortxt
+            // 
+            this.flavortxt.AutoSize = true;
+            this.flavortxt.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flavortxt.Location = new System.Drawing.Point(3, 550);
+            this.flavortxt.MaximumSize = new System.Drawing.Size(400, 250);
+            this.flavortxt.Name = "flavortxt";
+            this.flavortxt.Size = new System.Drawing.Size(77, 24);
+            this.flavortxt.TabIndex = 14;
+            this.flavortxt.Text = "flavor txt";
+            this.flavortxt.Visible = false;
+            // 
+            // selectedClass
+            // 
+            this.selectedClass.AutoSize = true;
+            this.selectedClass.Font = new System.Drawing.Font("Monotype Corsiva", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedClass.Location = new System.Drawing.Point(3, 500);
+            this.selectedClass.Name = "selectedClass";
+            this.selectedClass.Size = new System.Drawing.Size(227, 49);
+            this.selectedClass.TabIndex = 13;
+            this.selectedClass.Text = "The Barbarian";
+            this.selectedClass.Visible = false;
             // 
             // pictureBox12
             // 
@@ -355,8 +425,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImage = global::Spellbook.Properties.Resources.bard;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::Spellbook.Properties.Resources.bard;
             this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(145, 26);
             this.pictureBox1.Name = "pictureBox1";
@@ -364,28 +435,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // selectedClass
-            // 
-            this.selectedClass.AutoSize = true;
-            this.selectedClass.Font = new System.Drawing.Font("Monotype Corsiva", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectedClass.Location = new System.Drawing.Point(3, 500);
-            this.selectedClass.Name = "selectedClass";
-            this.selectedClass.Size = new System.Drawing.Size(227, 49);
-            this.selectedClass.TabIndex = 13;
-            this.selectedClass.Text = "The Barbarian";
-            this.selectedClass.Visible = false;
-            // 
-            // flavortxt
-            // 
-            this.flavortxt.AutoSize = true;
-            this.flavortxt.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flavortxt.Location = new System.Drawing.Point(3, 550);
-            this.flavortxt.Name = "flavortxt";
-            this.flavortxt.Size = new System.Drawing.Size(77, 24);
-            this.flavortxt.TabIndex = 14;
-            this.flavortxt.Text = "flavor txt";
-            this.flavortxt.Visible = false;
             // 
             // spellbookMenu
             // 
@@ -395,7 +444,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.exit;
-            this.ClientSize = new System.Drawing.Size(946, 596);
+            this.ClientSize = new System.Drawing.Size(957, 669);
             this.Controls.Add(this.leftpageCharacterCreate);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.panel2);
@@ -414,6 +463,8 @@
             this.leftpageCharacterCreate.PerformLayout();
             this.classList.ResumeLayout(false);
             this.classList.PerformLayout();
+            this.levelPanel.ResumeLayout(false);
+            this.levelPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -450,12 +501,16 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label selectedClass;
         private System.Windows.Forms.Label flavortxt;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Panel levelPanel;
+        private System.Windows.Forms.Label pickALevel;
+        private System.Windows.Forms.TextBox levelInput;
+        private System.Windows.Forms.Button createCharacter;
     }
 }
 

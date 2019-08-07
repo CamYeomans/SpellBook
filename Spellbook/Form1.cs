@@ -15,6 +15,7 @@ namespace Spellbook
     public partial class spellbookMenu : Form
     {
         string gamestate;
+        Character playerCharacter = new Character();
 
         public spellbookMenu()
         {
@@ -31,6 +32,11 @@ namespace Spellbook
         private void Form1_Load(object sender, EventArgs e)
         {
             panel2.Width = this.Width / 2;
+            leftpageCharacterCreate.Left = this.Width / 8;
+            leftpageCharacterCreate.Top = 100;
+            classList.Left = 25;
+            classList.Top = 75;
+            
         }
 
         private void Title_Click(object sender, EventArgs e)
@@ -71,8 +77,6 @@ namespace Spellbook
             this.BackgroundImage = Properties.Resources.OpenBook;
             leftpageCharacterCreate.Visible = true;
             classList.Visible = true;
-            leftpageCharacterCreate.Left = 250;
-            leftpageCharacterCreate.Top = 60;
             
         }
 
@@ -117,6 +121,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Bard";
             selectedClass.Visible = true;
+            flavortxt.Text = "An inspiring magician whose power echoes the music of creation";
             flavortxt.Visible = true;
         }
 
@@ -124,6 +129,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Sorcerer";
             selectedClass.Visible = true;
+            flavortxt.Text = "A spellcaster who draws on inherent magic from a gift or bloodline";
             flavortxt.Visible = true;
         }
 
@@ -131,6 +137,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Wizard";
             selectedClass.Visible = true;
+            flavortxt.Text = "A scholarly magic-user capable of manipulating the structure of reality";
             flavortxt.Visible = true;
         }
 
@@ -138,6 +145,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Ranger";
             selectedClass.Visible = true;
+            flavortxt.Text = "A warrior who combats theats on the edges of civilization";
             flavortxt.Visible = true;
         }
 
@@ -145,6 +153,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Monk";
             selectedClass.Visible = true;
+            flavortxt.Text = "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual elightenment";
             flavortxt.Visible = true;
         }
 
@@ -152,6 +161,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Fighter";
             selectedClass.Visible = true;
+            flavortxt.Text = "A master of martial combat, skilled with a variety of weapons and armor";
             flavortxt.Visible = true;
         }
 
@@ -159,6 +169,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Druid";
             selectedClass.Visible = true;
+            flavortxt.Text = "A priest of the old faith, wielding the powers of nature and adopting animal forms";
             flavortxt.Visible = true;
         }
 
@@ -166,6 +177,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Rogue";
             selectedClass.Visible = true;
+            flavortxt.Text = "A scoundrel who uses stealth and trickery to overcome obstacles and enemies";
             flavortxt.Visible = true;
         }
 
@@ -173,6 +185,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Barbarian";
             selectedClass.Visible = true;
+            flavortxt.Text = "A fierce warrior of primative background who can enter a battle rage";
             flavortxt.Visible = true;
         }
 
@@ -180,6 +193,7 @@ namespace Spellbook
         {
             selectedClass.Text = "The Cleric";
             selectedClass.Visible = true;
+            flavortxt.Text = "A priestly champion who wields divine magic in service of higher power";
             flavortxt.Visible = true;
         }
 
@@ -187,14 +201,37 @@ namespace Spellbook
         {
             selectedClass.Text = "The Paladin";
             selectedClass.Visible = true;
+            flavortxt.Text = "A holy warrior bound to a sacred oath";
             flavortxt.Visible = true;
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             selectedClass.Text = "The Warlock";
+            flavortxt.Text = "A wielder of magic that is derived from a bargain with an extraplanar entity";
             selectedClass.Visible = true;
 
+        }
+
+        private void createCharacter_Click(object sender, EventArgs e)
+        {
+            int inputvalue;
+            if (!Int32.TryParse(levelInput.Text,out inputvalue))
+            {
+                System.Windows.Forms.MessageBox.Show("Please enter a number between 1 and 20 in the character level box to choose your character's level");
+            }
+            else
+            {
+                if(inputvalue > 20 || inputvalue < 1)
+                {
+                    System.Windows.Forms.MessageBox.Show("Please enter a number between 1 and 20 in the character level box to choose your character's level");
+                }
+                else { System.Windows.Forms.MessageBox.Show(":)");
+                    playerCharacter.setLevel(inputvalue);
+                    playerCharacter.setClass("bard");
+                    System.Windows.Forms.MessageBox.Show(playerCharacter.GetCharClass().getTotalSpellsKnown(inputvalue).ToString());
+                }
+            }
         }
     }
 }
