@@ -92,7 +92,7 @@ namespace Spellbook
                 leftpageCharacterCreate.Width = this.Width;
                 leftpageCharacterCreate.Visible = false;
                 classList.Visible = false;
-                this.BackgroundImage = Properties.Resources.BookClosed;
+                this.BackgroundImage = Properties.Resources.book;
             }
             
         }

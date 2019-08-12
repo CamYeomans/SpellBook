@@ -161,6 +161,7 @@
   <ItemGroup>
     <Content Include="EE Spells 2.6.xml" />
     <Content Include="PHB Spells 3.9.0.xml" />
+    <None Include="Resources\book.png" />
     <Content Include="SCAG Spells 1.2.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

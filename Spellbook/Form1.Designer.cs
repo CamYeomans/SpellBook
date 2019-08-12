@@ -56,6 +56,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CharnameLabel = new System.Windows.Forms.Label();
+            this.charnameInput = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
@@ -171,7 +173,7 @@
             this.leftpageCharacterCreate.Location = new System.Drawing.Point(5, 36);
             this.leftpageCharacterCreate.Margin = new System.Windows.Forms.Padding(0);
             this.leftpageCharacterCreate.Name = "leftpageCharacterCreate";
-            this.leftpageCharacterCreate.Size = new System.Drawing.Size(869, 845);
+            this.leftpageCharacterCreate.Size = new System.Drawing.Size(869, 920);
             this.leftpageCharacterCreate.TabIndex = 3;
             this.leftpageCharacterCreate.Visible = false;
             this.leftpageCharacterCreate.Paint += new System.Windows.Forms.PaintEventHandler(this.leftpageCharacterCreate_Paint);
@@ -192,7 +194,6 @@
             this.classList.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.classList.AutoSize = true;
             this.classList.BackColor = System.Drawing.Color.Transparent;
-            this.classList.Controls.Add(this.createCharacter);
             this.classList.Controls.Add(this.levelPanel);
             this.classList.Controls.Add(this.flavortxt);
             this.classList.Controls.Add(this.selectedClass);
@@ -208,9 +209,9 @@
             this.classList.Controls.Add(this.pictureBox3);
             this.classList.Controls.Add(this.pictureBox2);
             this.classList.Controls.Add(this.pictureBox1);
-            this.classList.Location = new System.Drawing.Point(5, 89);
+            this.classList.Location = new System.Drawing.Point(5, 127);
             this.classList.Name = "classList";
-            this.classList.Size = new System.Drawing.Size(861, 753);
+            this.classList.Size = new System.Drawing.Size(861, 827);
             this.classList.TabIndex = 1;
             this.classList.Visible = false;
             this.classList.Paint += new System.Windows.Forms.PaintEventHandler(this.classList_Paint);
@@ -219,9 +220,9 @@
             // 
             this.createCharacter.AutoSize = true;
             this.createCharacter.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createCharacter.Location = new System.Drawing.Point(350, 680);
+            this.createCharacter.Location = new System.Drawing.Point(373, 35);
             this.createCharacter.Name = "createCharacter";
-            this.createCharacter.Size = new System.Drawing.Size(199, 47);
+            this.createCharacter.Size = new System.Drawing.Size(199, 132);
             this.createCharacter.TabIndex = 18;
             this.createCharacter.Text = "Create character";
             this.createCharacter.UseVisualStyleBackColor = true;
@@ -230,11 +231,14 @@
             // levelPanel
             // 
             this.levelPanel.AutoSize = true;
+            this.levelPanel.Controls.Add(this.createCharacter);
+            this.levelPanel.Controls.Add(this.charnameInput);
+            this.levelPanel.Controls.Add(this.CharnameLabel);
             this.levelPanel.Controls.Add(this.pickALevel);
             this.levelPanel.Controls.Add(this.levelInput);
-            this.levelPanel.Location = new System.Drawing.Point(3, 650);
+            this.levelPanel.Location = new System.Drawing.Point(3, 630);
             this.levelPanel.Name = "levelPanel";
-            this.levelPanel.Size = new System.Drawing.Size(233, 100);
+            this.levelPanel.Size = new System.Drawing.Size(575, 194);
             this.levelPanel.TabIndex = 17;
             // 
             // pickALevel
@@ -436,12 +440,31 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // CharnameLabel
+            // 
+            this.CharnameLabel.AutoSize = true;
+            this.CharnameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CharnameLabel.Location = new System.Drawing.Point(-3, 92);
+            this.CharnameLabel.Name = "CharnameLabel";
+            this.CharnameLabel.Size = new System.Drawing.Size(179, 34);
+            this.CharnameLabel.TabIndex = 17;
+            this.CharnameLabel.Text = "Enter your name";
+            // 
+            // charnameInput
+            // 
+            this.charnameInput.BackColor = System.Drawing.SystemColors.Info;
+            this.charnameInput.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charnameInput.Location = new System.Drawing.Point(0, 129);
+            this.charnameInput.Name = "charnameInput";
+            this.charnameInput.Size = new System.Drawing.Size(230, 38);
+            this.charnameInput.TabIndex = 18;
+            // 
             // spellbookMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Spellbook.Properties.Resources.book;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.exit;
             this.ClientSize = new System.Drawing.Size(957, 669);
@@ -511,6 +534,8 @@
         private System.Windows.Forms.Label pickALevel;
         private System.Windows.Forms.TextBox levelInput;
         private System.Windows.Forms.Button createCharacter;
+        private System.Windows.Forms.TextBox charnameInput;
+        private System.Windows.Forms.Label CharnameLabel;
     }
 }
 
