@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barbarian.cs" />
     <Compile Include="Bard.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="CharacterClass.cs" />
@@ -114,9 +115,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BookClosed.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\paper.png" />
   </ItemGroup>
   <ItemGroup>
@@ -159,8 +157,12 @@
     <None Include="Resources\Warlock.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EE Spells 2.6.xml" />
-    <Content Include="PHB Spells 3.9.0.xml" />
+    <Content Include="EE Spells 2.6.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PHB Spells 3.9.0.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Resources\book.png" />
     <Content Include="SCAG Spells 1.2.xml" />
   </ItemGroup>

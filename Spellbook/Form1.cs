@@ -36,7 +36,7 @@ namespace Spellbook
             leftpageCharacterCreate.Top = 100;
             classList.Left = 25;
             classList.Top = 75;
-            
+            rightpagepanel.Width = this.Width / 2;
         }
 
         private void Title_Click(object sender, EventArgs e)
@@ -92,6 +92,7 @@ namespace Spellbook
                 leftpageCharacterCreate.Width = this.Width;
                 leftpageCharacterCreate.Visible = false;
                 classList.Visible = false;
+                rightpagepanel.Visible = false;
                 this.BackgroundImage = Properties.Resources.book;
             }
             
@@ -225,13 +226,20 @@ namespace Spellbook
                 if(inputvalue > 20 || inputvalue < 1)
                 {
                     System.Windows.Forms.MessageBox.Show("Please enter a number between 1 and 20 in the character level box to choose your character's level");
+                }else if(charnameInput.Text.Equals(""))
+                {
+                    System.Windows.Forms.MessageBox.Show("Your name cannot be blank");
                 }
-                else { System.Windows.Forms.MessageBox.Show(":)");
+                else {
+                    playerCharacter.setClass(selectedClass.Text);
                     playerCharacter.setLevel(inputvalue);
-                    playerCharacter.setClass("bard");
-                    System.Windows.Forms.MessageBox.Show(playerCharacter.GetCharClass().getTotalSpellsKnown(inputvalue).ToString());
+                    playerCharacter.setName(charnameInput.Text);
+                    createdCharName.Text = playerCharacter.getName() + " the level " + playerCharacter.getLevel().ToString() + " " + playerCharacter.getClass().ToString();
+                    createdCharName.Visible = true;
                 }
             }
         }
+
+        
     }
 }

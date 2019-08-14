@@ -38,14 +38,15 @@
             this.leftpageCharacterCreate = new System.Windows.Forms.Panel();
             this.pickaclass = new System.Windows.Forms.Label();
             this.classList = new System.Windows.Forms.Panel();
-            this.createCharacter = new System.Windows.Forms.Button();
             this.levelPanel = new System.Windows.Forms.Panel();
+            this.createCharacter = new System.Windows.Forms.Button();
+            this.charnameInput = new System.Windows.Forms.TextBox();
+            this.CharnameLabel = new System.Windows.Forms.Label();
             this.pickALevel = new System.Windows.Forms.Label();
             this.levelInput = new System.Windows.Forms.TextBox();
             this.flavortxt = new System.Windows.Forms.Label();
             this.selectedClass = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -55,15 +56,15 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.createdCharName = new System.Windows.Forms.Label();
+            this.rightpagepanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CharnameLabel = new System.Windows.Forms.Label();
-            this.charnameInput = new System.Windows.Forms.TextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
             this.levelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -73,7 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.rightpagepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // newChar
@@ -170,10 +173,10 @@
             this.leftpageCharacterCreate.BackColor = System.Drawing.Color.Transparent;
             this.leftpageCharacterCreate.Controls.Add(this.pickaclass);
             this.leftpageCharacterCreate.Controls.Add(this.classList);
-            this.leftpageCharacterCreate.Location = new System.Drawing.Point(5, 36);
+            this.leftpageCharacterCreate.Location = new System.Drawing.Point(4, 36);
             this.leftpageCharacterCreate.Margin = new System.Windows.Forms.Padding(0);
             this.leftpageCharacterCreate.Name = "leftpageCharacterCreate";
-            this.leftpageCharacterCreate.Size = new System.Drawing.Size(869, 920);
+            this.leftpageCharacterCreate.Size = new System.Drawing.Size(872, 993);
             this.leftpageCharacterCreate.TabIndex = 3;
             this.leftpageCharacterCreate.Visible = false;
             this.leftpageCharacterCreate.Paint += new System.Windows.Forms.PaintEventHandler(this.leftpageCharacterCreate_Paint);
@@ -209,24 +212,12 @@
             this.classList.Controls.Add(this.pictureBox3);
             this.classList.Controls.Add(this.pictureBox2);
             this.classList.Controls.Add(this.pictureBox1);
-            this.classList.Location = new System.Drawing.Point(5, 127);
+            this.classList.Location = new System.Drawing.Point(5, 163);
             this.classList.Name = "classList";
             this.classList.Size = new System.Drawing.Size(861, 827);
             this.classList.TabIndex = 1;
             this.classList.Visible = false;
             this.classList.Paint += new System.Windows.Forms.PaintEventHandler(this.classList_Paint);
-            // 
-            // createCharacter
-            // 
-            this.createCharacter.AutoSize = true;
-            this.createCharacter.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createCharacter.Location = new System.Drawing.Point(373, 35);
-            this.createCharacter.Name = "createCharacter";
-            this.createCharacter.Size = new System.Drawing.Size(199, 132);
-            this.createCharacter.TabIndex = 18;
-            this.createCharacter.Text = "Create character";
-            this.createCharacter.UseVisualStyleBackColor = true;
-            this.createCharacter.Click += new System.EventHandler(this.createCharacter_Click);
             // 
             // levelPanel
             // 
@@ -240,6 +231,37 @@
             this.levelPanel.Name = "levelPanel";
             this.levelPanel.Size = new System.Drawing.Size(575, 194);
             this.levelPanel.TabIndex = 17;
+            // 
+            // createCharacter
+            // 
+            this.createCharacter.AutoSize = true;
+            this.createCharacter.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createCharacter.Location = new System.Drawing.Point(373, 35);
+            this.createCharacter.Name = "createCharacter";
+            this.createCharacter.Size = new System.Drawing.Size(199, 132);
+            this.createCharacter.TabIndex = 18;
+            this.createCharacter.Text = "Create character";
+            this.createCharacter.UseVisualStyleBackColor = true;
+            this.createCharacter.Click += new System.EventHandler(this.createCharacter_Click);
+            // 
+            // charnameInput
+            // 
+            this.charnameInput.BackColor = System.Drawing.SystemColors.Info;
+            this.charnameInput.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.charnameInput.Location = new System.Drawing.Point(0, 129);
+            this.charnameInput.Name = "charnameInput";
+            this.charnameInput.Size = new System.Drawing.Size(230, 38);
+            this.charnameInput.TabIndex = 18;
+            // 
+            // CharnameLabel
+            // 
+            this.CharnameLabel.AutoSize = true;
+            this.CharnameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CharnameLabel.Location = new System.Drawing.Point(-3, 92);
+            this.CharnameLabel.Name = "CharnameLabel";
+            this.CharnameLabel.Size = new System.Drawing.Size(179, 34);
+            this.CharnameLabel.TabIndex = 17;
+            this.CharnameLabel.Text = "Enter your name";
             // 
             // pickALevel
             // 
@@ -295,19 +317,6 @@
             this.pictureBox12.TabIndex = 12;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::Spellbook.Properties.Resources.cleric;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.ImageLocation = "";
-            this.pictureBox11.Location = new System.Drawing.Point(287, 26);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(136, 135);
-            this.pictureBox11.TabIndex = 11;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // pictureBox10
             // 
@@ -380,7 +389,7 @@
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.ImageLocation = "";
-            this.pictureBox5.Location = new System.Drawing.Point(145, 175);
+            this.pictureBox5.Location = new System.Drawing.Point(145, 182);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(136, 135);
             this.pictureBox5.TabIndex = 4;
@@ -426,6 +435,27 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // createdCharName
+            // 
+            this.createdCharName.AutoSize = true;
+            this.createdCharName.Font = new System.Drawing.Font("Monotype Corsiva", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createdCharName.Location = new System.Drawing.Point(250, 100);
+            this.createdCharName.Name = "createdCharName";
+            this.createdCharName.Size = new System.Drawing.Size(407, 46);
+            this.createdCharName.TabIndex = 4;
+            this.createdCharName.Text = "Placeholder the level 69 dude";
+            this.createdCharName.Visible = false;
+            // 
+            // rightpagepanel
+            // 
+            this.rightpagepanel.BackColor = System.Drawing.Color.Transparent;
+            this.rightpagepanel.Controls.Add(this.createdCharName);
+            this.rightpagepanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightpagepanel.Location = new System.Drawing.Point(542, 0);
+            this.rightpagepanel.Name = "rightpagepanel";
+            this.rightpagepanel.Size = new System.Drawing.Size(413, 669);
+            this.rightpagepanel.TabIndex = 5;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -440,24 +470,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // CharnameLabel
+            // pictureBox11
             // 
-            this.CharnameLabel.AutoSize = true;
-            this.CharnameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharnameLabel.Location = new System.Drawing.Point(-3, 92);
-            this.CharnameLabel.Name = "CharnameLabel";
-            this.CharnameLabel.Size = new System.Drawing.Size(179, 34);
-            this.CharnameLabel.TabIndex = 17;
-            this.CharnameLabel.Text = "Enter your name";
-            // 
-            // charnameInput
-            // 
-            this.charnameInput.BackColor = System.Drawing.SystemColors.Info;
-            this.charnameInput.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.charnameInput.Location = new System.Drawing.Point(0, 129);
-            this.charnameInput.Name = "charnameInput";
-            this.charnameInput.Size = new System.Drawing.Size(230, 38);
-            this.charnameInput.TabIndex = 18;
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::Spellbook.Properties.Resources.cleric;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.ImageLocation = "";
+            this.pictureBox11.Location = new System.Drawing.Point(287, 26);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(136, 135);
+            this.pictureBox11.TabIndex = 11;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // spellbookMenu
             // 
@@ -467,7 +491,8 @@
             this.BackgroundImage = global::Spellbook.Properties.Resources.book;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.exit;
-            this.ClientSize = new System.Drawing.Size(957, 669);
+            this.ClientSize = new System.Drawing.Size(955, 669);
+            this.Controls.Add(this.rightpagepanel);
             this.Controls.Add(this.leftpageCharacterCreate);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.panel2);
@@ -489,7 +514,6 @@
             this.levelPanel.ResumeLayout(false);
             this.levelPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -499,7 +523,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.rightpagepanel.ResumeLayout(false);
+            this.rightpagepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,7 +543,6 @@
         private System.Windows.Forms.Panel leftpageCharacterCreate;
         private System.Windows.Forms.Label pickaclass;
         private System.Windows.Forms.Panel classList;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -525,7 +551,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label selectedClass;
         private System.Windows.Forms.Label flavortxt;
@@ -536,6 +561,10 @@
         private System.Windows.Forms.Button createCharacter;
         private System.Windows.Forms.TextBox charnameInput;
         private System.Windows.Forms.Label CharnameLabel;
+        private System.Windows.Forms.Label createdCharName;
+        private System.Windows.Forms.Panel rightpagepanel;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

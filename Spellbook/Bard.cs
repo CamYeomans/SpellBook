@@ -48,5 +48,10 @@ namespace Spellbook
         {
             return spellsknown[classLevel];
         }
+
+        public override string ToString()
+        {
+            return "Bard";
+        }
     }
 }

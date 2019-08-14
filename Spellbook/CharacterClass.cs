@@ -10,7 +10,7 @@ namespace Spellbook
     {
         private int spellSaveDC;
         private int spellAttackMod;
-        private int[] profBonus = new int[] {2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6};
+        private int[] profBonus = new int[] { 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6 };
         private string flavortxt;
         private string spellcastingAbility;
         private string spellList;
@@ -22,7 +22,7 @@ namespace Spellbook
         /// this method is used to get the flavor text for each class
         /// </summary>
         /// <returns></returns>
-        public string  getFlavortxt()
+        public string getFlavortxt()
         {
             return flavortxt;
         }
@@ -32,6 +32,13 @@ namespace Spellbook
         {
             flavortxt = newFlavorText;
         }
+
+        /// <summary>
+        /// this is used when getting the name of each class
+        /// </summary>
+        /// <returns></returns>
+        public abstract override string ToString();
+        
 
         /// <summary>
         /// returns the number of spell that can be learned by a character at that level
