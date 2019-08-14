@@ -65,6 +65,7 @@
     <Compile Include="Bard.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="CharacterClass.cs" />
+    <Compile Include="Cleric.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
