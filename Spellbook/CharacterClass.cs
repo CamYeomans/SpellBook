@@ -10,7 +10,7 @@ namespace Spellbook
     {
         private int spellSaveDC;
         private int spellAttackMod;
-        private int[] profBonus = new int[] { 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6 };
+        private int[] profBonus = new int[] {0, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6 };
         private string flavortxt;
         private string spellcastingAbility = "spellcasting";
         private int spellcastingAbilityValue;
@@ -58,6 +58,12 @@ namespace Spellbook
         /// <returns></returns>
         public abstract int getTotalSpellsKnown(int classLevel);
      
+
+        public int getProfBonus(int level)
+        {
+            return profBonus[level];
+        }
+
         /// <summary>
         /// used to aquire the spellcasting ab for things like damage calculation 
         /// </summary>

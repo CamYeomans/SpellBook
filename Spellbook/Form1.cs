@@ -100,6 +100,7 @@ namespace Spellbook
                 levelInput.Text = "";
                 selectedClass.Text = "";
                 playerCharacter = new Character();
+                statsPanel.Visible = false;
             }
             
         }
@@ -265,7 +266,22 @@ namespace Spellbook
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show(":)");
+                int charvalue;
+                if (modBox.Text[0] == '+')
+                {
+                    Int32.TryParse(modBox.Text.Substring(1),out charvalue);
+                    playerCharacter.GetCharClass().setSpellAbilityValue(charvalue);
+                }
+                else
+                {
+                    Int32.TryParse(modBox.Text.Substring(1), out charvalue);
+                    playerCharacter.GetCharClass().setSpellAbilityValue(charvalue);
+                }
+                spellSaveDC.Text = "Spell save DC:\n" + (playerCharacter.GetCharClass().getSpellcastingAbilityValue() + 8 + playerCharacter.GetCharClass().getProfBonus(playerCharacter.getLevel())).ToString();
+                spellattackmodlabel.Text = "Spell attack modifier:\n" + (playerCharacter.GetCharClass().getSpellcastingAbilityValue() + playerCharacter.GetCharClass().getProfBonus(playerCharacter.getLevel())).ToString();
+                spellsKnowLabel.Text = "Spells Known:\n" + playerCharacter.GetCharClass().getTotalSpellsKnown(playerCharacter.getLevel()).ToString();
+                cantripsKnownLabel.Text = "Cantrips Known:\n" + playerCharacter.GetCharClass().getspellslots(playerCharacter.getLevel(), 0);
+                statsPanel.Visible = true;
             }
         }
     }
