@@ -163,6 +163,7 @@
     <Content Include="PHB Spells 3.9.0.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="XGTESpells.xml" />
     <None Include="Resources\book.png" />
     <Content Include="SCAG Spells 1.2.xml" />
   </ItemGroup>
