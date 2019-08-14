@@ -80,7 +80,7 @@ namespace Spellbook
             }
             else if (charClass == "The Fighter")
             {
-
+                selectedClass = new Fighter(lvl);
             }
             else if (charClass == "The Monk")
             {
