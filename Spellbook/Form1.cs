@@ -244,6 +244,7 @@ namespace Spellbook
                     playerCharacter.setName(charnameInput.Text);
                     createdCharName.Text = playerCharacter.getName() + " the level " + playerCharacter.getLevel().ToString() + " " + playerCharacter.getClass().ToString();
                     createdCharName.Visible = true;
+                    rightpagepanel.Visible = true;
                 }
             }
         }

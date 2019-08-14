@@ -84,19 +84,19 @@ namespace Spellbook
             }
             else if (charClass == "The Monk")
             {
-
+                selectedClass = new Monk(lvl);
             }
             else if (charClass == "The Paladin")
             {
-
+                selectedClass = new Paladin(lvl);
             }
             else if (charClass == "The Ranger")
             {
-
+                selectedClass = new Ranger(lvl);
             }
             else if (charClass == "The Rogue")
             {
-
+                selectedClass = new Rogue(lvl);
             }
             else if (charClass == "The Sorcerer")
             {
