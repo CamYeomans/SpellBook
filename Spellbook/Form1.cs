@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Spellbook
 {
@@ -252,9 +253,19 @@ namespace Spellbook
 
         private void modClick(object sender, EventArgs e)
         {
-            if(modBox.Text == "")
+            var regex = @"^(\+|-)?\d?\d$";
+            Match match = Regex.Match(modBox.Text, regex, RegexOptions.IgnoreCase);
+
+            if (modBox.Text == "")
             {
                 System.Windows.Forms.MessageBox.Show("Please enter your character's spellcasting modifier\nexamples:\n+5\n-3\n0");
+            }else if (!match.Success)
+            {
+                System.Windows.Forms.MessageBox.Show("Please enter a valid spellcasting modifier\nexamples:\n+5\n-3\n0");
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show(":)");
             }
         }
     }
