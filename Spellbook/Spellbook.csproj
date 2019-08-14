@@ -160,12 +160,12 @@
     <Content Include="EE Spells 2.6.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="PHB Spells 3.9.0.xml">
+    <Content Include="PHBSpells 3.9.0.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XGTESpells.xml" />
     <None Include="Resources\book.png" />
-    <Content Include="SCAG Spells 1.2.xml" />
+    <Content Include="SCAGSpells 1.2.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
