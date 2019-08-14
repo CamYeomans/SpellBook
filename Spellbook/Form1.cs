@@ -37,6 +37,7 @@ namespace Spellbook
             classList.Left = 25;
             classList.Top = 75;
             rightpagepanel.Width = this.Width / 2;
+            selectedClass.Text = "";
         }
 
         private void Title_Click(object sender, EventArgs e)
@@ -94,6 +95,9 @@ namespace Spellbook
                 classList.Visible = false;
                 rightpagepanel.Visible = false;
                 this.BackgroundImage = Properties.Resources.book;
+                charnameInput.Text = "";
+                levelInput.Text = "";
+                selectedClass.Text = "";
             }
             
         }
@@ -229,6 +233,9 @@ namespace Spellbook
                 }else if(charnameInput.Text.Equals(""))
                 {
                     System.Windows.Forms.MessageBox.Show("Your name cannot be blank");
+                }else if(selectedClass.Text == "")
+                {
+                    System.Windows.Forms.MessageBox.Show("You must select a class");
                 }
                 else {
                     playerCharacter.setClass(selectedClass.Text);

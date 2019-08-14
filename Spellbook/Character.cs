@@ -72,7 +72,7 @@ namespace Spellbook
             }
             else if (charClass == "The Cleric")
             {
-
+                selectedClass = new Cleric(lvl);
             }
             else if (charClass == "The Druid")
             {

@@ -40,8 +40,6 @@ namespace Spellbook
             setSpellChart(bardChart);
             setTotalSpells(getTotalSpellsKnown(level));
 
-
-
         }
 
         public override int getTotalSpellsKnown(int classLevel)
