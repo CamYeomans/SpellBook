@@ -243,12 +243,19 @@ namespace Spellbook
                     playerCharacter.setLevel(inputvalue);
                     playerCharacter.setName(charnameInput.Text);
                     createdCharName.Text = playerCharacter.getName() + " the level " + playerCharacter.getLevel().ToString() + " " + playerCharacter.getClass().ToString();
+                    modifierLabel.Text = "Please enter your character's " + playerCharacter.getClass().getSpellcastingAbility() + " modifier";
                     createdCharName.Visible = true;
                     rightpagepanel.Visible = true;
                 }
             }
         }
 
-        
+        private void modClick(object sender, EventArgs e)
+        {
+            if(modBox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Please enter your character's spellcasting modifier\nexamples:\n+5\n-3\n0");
+            }
+        }
     }
 }

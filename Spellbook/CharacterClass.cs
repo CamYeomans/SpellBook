@@ -12,7 +12,7 @@ namespace Spellbook
         private int spellAttackMod;
         private int[] profBonus = new int[] { 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6 };
         private string flavortxt;
-        private string spellcastingAbility;
+        private string spellcastingAbility = "spellcasting";
         private int spellcastingAbilityValue;
         private string spellList;
         private int totalspellsKnown;

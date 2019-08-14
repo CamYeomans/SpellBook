@@ -60,6 +60,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.createdCharName = new System.Windows.Forms.Label();
             this.rightpagepanel = new System.Windows.Forms.Panel();
+            this.modifierLabel = new System.Windows.Forms.Label();
+            this.modBox = new System.Windows.Forms.TextBox();
+            this.modpanel = new System.Windows.Forms.Panel();
+            this.enterMod = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
@@ -77,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.rightpagepanel.SuspendLayout();
+            this.modpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // newChar
@@ -476,12 +481,52 @@
             // rightpagepanel
             // 
             this.rightpagepanel.BackColor = System.Drawing.Color.Transparent;
+            this.rightpagepanel.Controls.Add(this.modpanel);
             this.rightpagepanel.Controls.Add(this.createdCharName);
             this.rightpagepanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightpagepanel.Location = new System.Drawing.Point(542, 0);
             this.rightpagepanel.Name = "rightpagepanel";
             this.rightpagepanel.Size = new System.Drawing.Size(413, 669);
             this.rightpagepanel.TabIndex = 5;
+            this.rightpagepanel.Visible = false;
+            // 
+            // modifierLabel
+            // 
+            this.modifierLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifierLabel.Location = new System.Drawing.Point(-4, 0);
+            this.modifierLabel.Name = "modifierLabel";
+            this.modifierLabel.Size = new System.Drawing.Size(285, 135);
+            this.modifierLabel.TabIndex = 20;
+            this.modifierLabel.Text = "Please enter your character\'s PLACEHOLDER modifier\r\n";
+            // 
+            // modBox
+            // 
+            this.modBox.BackColor = System.Drawing.SystemColors.Info;
+            this.modBox.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modBox.Location = new System.Drawing.Point(0, 73);
+            this.modBox.Name = "modBox";
+            this.modBox.Size = new System.Drawing.Size(281, 38);
+            this.modBox.TabIndex = 19;
+            // 
+            // modpanel
+            // 
+            this.modpanel.Controls.Add(this.enterMod);
+            this.modpanel.Controls.Add(this.modBox);
+            this.modpanel.Controls.Add(this.modifierLabel);
+            this.modpanel.Location = new System.Drawing.Point(183, 150);
+            this.modpanel.Name = "modpanel";
+            this.modpanel.Size = new System.Drawing.Size(402, 135);
+            this.modpanel.TabIndex = 21;
+            // 
+            // enterMod
+            // 
+            this.enterMod.Location = new System.Drawing.Point(312, 3);
+            this.enterMod.Name = "enterMod";
+            this.enterMod.Size = new System.Drawing.Size(75, 108);
+            this.enterMod.TabIndex = 21;
+            this.enterMod.Text = "Continue";
+            this.enterMod.UseVisualStyleBackColor = true;
+            this.enterMod.Click += new System.EventHandler(this.modClick);
             // 
             // spellbookMenu
             // 
@@ -527,6 +572,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.rightpagepanel.ResumeLayout(false);
             this.rightpagepanel.PerformLayout();
+            this.modpanel.ResumeLayout(false);
+            this.modpanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -565,6 +612,10 @@
         private System.Windows.Forms.Panel rightpagepanel;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label modifierLabel;
+        private System.Windows.Forms.TextBox modBox;
+        private System.Windows.Forms.Panel modpanel;
+        private System.Windows.Forms.Button enterMod;
     }
 }
 
