@@ -13,6 +13,7 @@ namespace Spellbook
         private int[] profBonus = new int[] { 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6 };
         private string flavortxt;
         private string spellcastingAbility;
+        private int spellcastingAbilityValue;
         private string spellList;
         private int totalspellsKnown;
         //2d array used for determining the level and number of spell slots characters have
@@ -31,6 +32,16 @@ namespace Spellbook
         public void setFlavortxt(string newFlavorText)
         {
             flavortxt = newFlavorText;
+        }
+
+        public int getSpellcastingAbilityValue()
+        {
+            return spellcastingAbilityValue;
+        }
+
+        public void setSpellAbilityValue(int newvalue)
+        {
+            spellcastingAbilityValue = newvalue;
         }
 
         /// <summary>

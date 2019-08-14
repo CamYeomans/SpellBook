@@ -76,7 +76,7 @@ namespace Spellbook
             }
             else if (charClass == "The Druid")
             {
-
+                selectedClass = new Druid(lvl);
             }
             else if (charClass == "The Fighter")
             {

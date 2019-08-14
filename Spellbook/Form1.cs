@@ -98,6 +98,7 @@ namespace Spellbook
                 charnameInput.Text = "";
                 levelInput.Text = "";
                 selectedClass.Text = "";
+                playerCharacter = new Character();
             }
             
         }
