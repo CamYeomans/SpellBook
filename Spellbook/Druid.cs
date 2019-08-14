@@ -42,7 +42,11 @@ namespace Spellbook
 
         public override int getTotalSpellsKnown(int classLevel)
         {
-            throw new NotImplementedException();
+            if (classLevel + this.getSpellcastingAbilityValue() < 1)
+            {
+                return 1;
+            }
+            else { return classLevel + this.getSpellcastingAbilityValue(); }
         }
 
         public override string ToString()

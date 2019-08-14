@@ -14,7 +14,7 @@ namespace Spellbook
         }
         public override int getTotalSpellsKnown(int classLevel)
         {
-            throw new NotImplementedException();
+            return 0;
         }
 
         public override string ToString()
