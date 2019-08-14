@@ -82,6 +82,8 @@
     <Compile Include="Rogue.cs" />
     <Compile Include="Sorcerer.cs" />
     <Compile Include="Spell.cs" />
+    <Compile Include="Warlock.cs" />
+    <Compile Include="Wizard.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -47,6 +47,7 @@
             this.flavortxt = new System.Windows.Forms.Label();
             this.selectedClass = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -56,15 +57,15 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.createdCharName = new System.Windows.Forms.Label();
             this.rightpagepanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
             this.levelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -74,9 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.rightpagepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.rightpagepanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // newChar
@@ -227,7 +227,7 @@
             this.levelPanel.Controls.Add(this.CharnameLabel);
             this.levelPanel.Controls.Add(this.pickALevel);
             this.levelPanel.Controls.Add(this.levelInput);
-            this.levelPanel.Location = new System.Drawing.Point(3, 630);
+            this.levelPanel.Location = new System.Drawing.Point(0, 630);
             this.levelPanel.Name = "levelPanel";
             this.levelPanel.Size = new System.Drawing.Size(575, 194);
             this.levelPanel.TabIndex = 17;
@@ -250,7 +250,7 @@
             this.charnameInput.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.charnameInput.Location = new System.Drawing.Point(0, 129);
             this.charnameInput.Name = "charnameInput";
-            this.charnameInput.Size = new System.Drawing.Size(230, 38);
+            this.charnameInput.Size = new System.Drawing.Size(281, 38);
             this.charnameInput.TabIndex = 18;
             // 
             // CharnameLabel
@@ -259,9 +259,9 @@
             this.CharnameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CharnameLabel.Location = new System.Drawing.Point(-3, 92);
             this.CharnameLabel.Name = "CharnameLabel";
-            this.CharnameLabel.Size = new System.Drawing.Size(179, 34);
+            this.CharnameLabel.Size = new System.Drawing.Size(289, 34);
             this.CharnameLabel.TabIndex = 17;
-            this.CharnameLabel.Text = "Enter your name";
+            this.CharnameLabel.Text = "Enter your character\'s name";
             // 
             // pickALevel
             // 
@@ -279,7 +279,7 @@
             this.levelInput.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levelInput.Location = new System.Drawing.Point(0, 37);
             this.levelInput.Name = "levelInput";
-            this.levelInput.Size = new System.Drawing.Size(230, 38);
+            this.levelInput.Size = new System.Drawing.Size(281, 38);
             this.levelInput.TabIndex = 15;
             // 
             // flavortxt
@@ -317,6 +317,19 @@
             this.pictureBox12.TabIndex = 12;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::Spellbook.Properties.Resources.cleric;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.ImageLocation = "";
+            this.pictureBox11.Location = new System.Drawing.Point(287, 26);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(136, 135);
+            this.pictureBox11.TabIndex = 11;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // pictureBox10
             // 
@@ -435,11 +448,25 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Spellbook.Properties.Resources.bard;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::Spellbook.Properties.Resources.bard;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(145, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(136, 135);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // createdCharName
             // 
             this.createdCharName.AutoSize = true;
             this.createdCharName.Font = new System.Drawing.Font("Monotype Corsiva", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createdCharName.Location = new System.Drawing.Point(250, 100);
+            this.createdCharName.Location = new System.Drawing.Point(175, 75);
             this.createdCharName.Name = "createdCharName";
             this.createdCharName.Size = new System.Drawing.Size(407, 46);
             this.createdCharName.TabIndex = 4;
@@ -455,33 +482,6 @@
             this.rightpagepanel.Name = "rightpagepanel";
             this.rightpagepanel.Size = new System.Drawing.Size(413, 669);
             this.rightpagepanel.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Spellbook.Properties.Resources.bard;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::Spellbook.Properties.Resources.bard;
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(145, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 135);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::Spellbook.Properties.Resources.cleric;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.ImageLocation = "";
-            this.pictureBox11.Location = new System.Drawing.Point(287, 26);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(136, 135);
-            this.pictureBox11.TabIndex = 11;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // spellbookMenu
             // 
@@ -514,6 +514,7 @@
             this.levelPanel.ResumeLayout(false);
             this.levelPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -523,10 +524,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.rightpagepanel.ResumeLayout(false);
             this.rightpagepanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

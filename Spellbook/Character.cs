@@ -104,11 +104,11 @@ namespace Spellbook
             }
             else if (charClass == "The Warlock")
             {
-
+                selectedClass = new Warlock(lvl);
             }
             else if (charClass == "The Wizard")
             {
-
+                selectedClass = new Wizard(lvl);
             }
             else { }
         }
