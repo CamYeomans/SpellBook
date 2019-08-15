@@ -60,15 +60,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.createdCharName = new System.Windows.Forms.Label();
             this.rightpagepanel = new System.Windows.Forms.Panel();
-            this.modifierLabel = new System.Windows.Forms.Label();
-            this.modBox = new System.Windows.Forms.TextBox();
+            this.availableSpells = new System.Windows.Forms.Label();
+            this.statsPanel = new System.Windows.Forms.Panel();
+            this.spellattackmodlabel = new System.Windows.Forms.Label();
+            this.spellSaveDC = new System.Windows.Forms.Label();
+            this.cantripsKnownLabel = new System.Windows.Forms.Label();
+            this.spellsKnowLabel = new System.Windows.Forms.Label();
             this.modpanel = new System.Windows.Forms.Panel();
             this.enterMod = new System.Windows.Forms.Button();
-            this.statsPanel = new System.Windows.Forms.Panel();
-            this.spellsKnowLabel = new System.Windows.Forms.Label();
-            this.cantripsKnownLabel = new System.Windows.Forms.Label();
-            this.spellSaveDC = new System.Windows.Forms.Label();
-            this.spellattackmodlabel = new System.Windows.Forms.Label();
+            this.modBox = new System.Windows.Forms.TextBox();
+            this.modifierLabel = new System.Windows.Forms.Label();
+            this.SpellList = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.spellNameLabel = new System.Windows.Forms.Label();
+            this.spellLevelList = new System.Windows.Forms.ListBox();
+            this.spellLevelLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
@@ -86,8 +92,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.rightpagepanel.SuspendLayout();
-            this.modpanel.SuspendLayout();
             this.statsPanel.SuspendLayout();
+            this.modpanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // newChar
@@ -487,6 +494,8 @@
             // rightpagepanel
             // 
             this.rightpagepanel.BackColor = System.Drawing.Color.Transparent;
+            this.rightpagepanel.Controls.Add(this.tableLayoutPanel1);
+            this.rightpagepanel.Controls.Add(this.availableSpells);
             this.rightpagepanel.Controls.Add(this.statsPanel);
             this.rightpagepanel.Controls.Add(this.modpanel);
             this.rightpagepanel.Controls.Add(this.createdCharName);
@@ -497,43 +506,16 @@
             this.rightpagepanel.TabIndex = 5;
             this.rightpagepanel.Visible = false;
             // 
-            // modifierLabel
+            // availableSpells
             // 
-            this.modifierLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifierLabel.Location = new System.Drawing.Point(-4, 0);
-            this.modifierLabel.Name = "modifierLabel";
-            this.modifierLabel.Size = new System.Drawing.Size(285, 135);
-            this.modifierLabel.TabIndex = 20;
-            this.modifierLabel.Text = "Please enter your character\'s PLACEHOLDER modifier\r\n";
-            // 
-            // modBox
-            // 
-            this.modBox.BackColor = System.Drawing.SystemColors.Info;
-            this.modBox.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modBox.Location = new System.Drawing.Point(0, 73);
-            this.modBox.Name = "modBox";
-            this.modBox.Size = new System.Drawing.Size(281, 38);
-            this.modBox.TabIndex = 19;
-            // 
-            // modpanel
-            // 
-            this.modpanel.Controls.Add(this.enterMod);
-            this.modpanel.Controls.Add(this.modBox);
-            this.modpanel.Controls.Add(this.modifierLabel);
-            this.modpanel.Location = new System.Drawing.Point(183, 150);
-            this.modpanel.Name = "modpanel";
-            this.modpanel.Size = new System.Drawing.Size(402, 135);
-            this.modpanel.TabIndex = 21;
-            // 
-            // enterMod
-            // 
-            this.enterMod.Location = new System.Drawing.Point(312, 3);
-            this.enterMod.Name = "enterMod";
-            this.enterMod.Size = new System.Drawing.Size(75, 108);
-            this.enterMod.TabIndex = 21;
-            this.enterMod.Text = "Continue";
-            this.enterMod.UseVisualStyleBackColor = true;
-            this.enterMod.Click += new System.EventHandler(this.modClick);
+            this.availableSpells.AutoSize = true;
+            this.availableSpells.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.availableSpells.Location = new System.Drawing.Point(184, 424);
+            this.availableSpells.Name = "availableSpells";
+            this.availableSpells.Size = new System.Drawing.Size(175, 34);
+            this.availableSpells.TabIndex = 26;
+            this.availableSpells.Text = "Available Spells";
+            this.availableSpells.Visible = false;
             // 
             // statsPanel
             // 
@@ -543,29 +525,19 @@
             this.statsPanel.Controls.Add(this.spellsKnowLabel);
             this.statsPanel.Location = new System.Drawing.Point(175, 300);
             this.statsPanel.Name = "statsPanel";
-            this.statsPanel.Size = new System.Drawing.Size(627, 139);
+            this.statsPanel.Size = new System.Drawing.Size(627, 103);
             this.statsPanel.TabIndex = 22;
             this.statsPanel.Visible = false;
             // 
-            // spellsKnowLabel
+            // spellattackmodlabel
             // 
-            this.spellsKnowLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellsKnowLabel.Location = new System.Drawing.Point(-4, 0);
-            this.spellsKnowLabel.Name = "spellsKnowLabel";
-            this.spellsKnowLabel.Size = new System.Drawing.Size(100, 135);
-            this.spellsKnowLabel.TabIndex = 22;
-            this.spellsKnowLabel.Text = "Spells Known:";
-            this.spellsKnowLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // cantripsKnownLabel
-            // 
-            this.cantripsKnownLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantripsKnownLabel.Location = new System.Drawing.Point(102, 0);
-            this.cantripsKnownLabel.Name = "cantripsKnownLabel";
-            this.cantripsKnownLabel.Size = new System.Drawing.Size(100, 135);
-            this.cantripsKnownLabel.TabIndex = 23;
-            this.cantripsKnownLabel.Text = "Cantrips Known:";
-            this.cantripsKnownLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.spellattackmodlabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellattackmodlabel.Location = new System.Drawing.Point(320, 0);
+            this.spellattackmodlabel.Name = "spellattackmodlabel";
+            this.spellattackmodlabel.Size = new System.Drawing.Size(133, 135);
+            this.spellattackmodlabel.TabIndex = 25;
+            this.spellattackmodlabel.Text = "Spell Attack Modifier:";
+            this.spellattackmodlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // spellSaveDC
             // 
@@ -577,15 +549,121 @@
             this.spellSaveDC.Text = "Spell save DC:";
             this.spellSaveDC.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // spellattackmodlabel
+            // cantripsKnownLabel
             // 
-            this.spellattackmodlabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellattackmodlabel.Location = new System.Drawing.Point(320, 0);
-            this.spellattackmodlabel.Name = "spellattackmodlabel";
-            this.spellattackmodlabel.Size = new System.Drawing.Size(133, 135);
-            this.spellattackmodlabel.TabIndex = 25;
-            this.spellattackmodlabel.Text = "Spell Attack Modifier:";
-            this.spellattackmodlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.cantripsKnownLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantripsKnownLabel.Location = new System.Drawing.Point(102, 0);
+            this.cantripsKnownLabel.Name = "cantripsKnownLabel";
+            this.cantripsKnownLabel.Size = new System.Drawing.Size(100, 135);
+            this.cantripsKnownLabel.TabIndex = 23;
+            this.cantripsKnownLabel.Text = "Cantrips Known:";
+            this.cantripsKnownLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // spellsKnowLabel
+            // 
+            this.spellsKnowLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellsKnowLabel.Location = new System.Drawing.Point(-4, 0);
+            this.spellsKnowLabel.Name = "spellsKnowLabel";
+            this.spellsKnowLabel.Size = new System.Drawing.Size(100, 135);
+            this.spellsKnowLabel.TabIndex = 22;
+            this.spellsKnowLabel.Text = "Spells Known:";
+            this.spellsKnowLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // modpanel
+            // 
+            this.modpanel.Controls.Add(this.enterMod);
+            this.modpanel.Controls.Add(this.modBox);
+            this.modpanel.Controls.Add(this.modifierLabel);
+            this.modpanel.Location = new System.Drawing.Point(183, 150);
+            this.modpanel.Name = "modpanel";
+            this.modpanel.Size = new System.Drawing.Size(500, 135);
+            this.modpanel.TabIndex = 21;
+            // 
+            // enterMod
+            // 
+            this.enterMod.Location = new System.Drawing.Point(312, 3);
+            this.enterMod.Name = "enterMod";
+            this.enterMod.Size = new System.Drawing.Size(108, 108);
+            this.enterMod.TabIndex = 21;
+            this.enterMod.Text = "Continue";
+            this.enterMod.UseVisualStyleBackColor = true;
+            this.enterMod.Click += new System.EventHandler(this.modClick);
+            // 
+            // modBox
+            // 
+            this.modBox.BackColor = System.Drawing.SystemColors.Info;
+            this.modBox.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modBox.Location = new System.Drawing.Point(0, 73);
+            this.modBox.Name = "modBox";
+            this.modBox.Size = new System.Drawing.Size(281, 38);
+            this.modBox.TabIndex = 19;
+            // 
+            // modifierLabel
+            // 
+            this.modifierLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifierLabel.Location = new System.Drawing.Point(-4, 0);
+            this.modifierLabel.Name = "modifierLabel";
+            this.modifierLabel.Size = new System.Drawing.Size(285, 135);
+            this.modifierLabel.TabIndex = 20;
+            this.modifierLabel.Text = "Please enter your character\'s PLACEHOLDER modifier\r\n";
+            // 
+            // SpellList
+            // 
+            this.SpellList.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpellList.FormattingEnabled = true;
+            this.SpellList.ItemHeight = 24;
+            this.SpellList.Location = new System.Drawing.Point(3, 53);
+            this.SpellList.Name = "SpellList";
+            this.SpellList.Size = new System.Drawing.Size(94, 28);
+            this.SpellList.TabIndex = 27;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.SpellList, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.spellNameLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.spellLevelList, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.spellLevelLabel, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(175, 461);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 28;
+            this.tableLayoutPanel1.Visible = false;
+            // 
+            // spellNameLabel
+            // 
+            this.spellNameLabel.AutoSize = true;
+            this.spellNameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellNameLabel.Location = new System.Drawing.Point(3, 0);
+            this.spellNameLabel.Name = "spellNameLabel";
+            this.spellNameLabel.Size = new System.Drawing.Size(74, 34);
+            this.spellNameLabel.TabIndex = 28;
+            this.spellNameLabel.Text = "Name";
+            // 
+            // spellLevelList
+            // 
+            this.spellLevelList.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellLevelList.FormattingEnabled = true;
+            this.spellLevelList.ItemHeight = 24;
+            this.spellLevelList.Location = new System.Drawing.Point(103, 53);
+            this.spellLevelList.Name = "spellLevelList";
+            this.spellLevelList.Size = new System.Drawing.Size(94, 28);
+            this.spellLevelList.TabIndex = 29;
+            // 
+            // spellLevelLabel
+            // 
+            this.spellLevelLabel.AutoSize = true;
+            this.spellLevelLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellLevelLabel.Location = new System.Drawing.Point(103, 0);
+            this.spellLevelLabel.Name = "spellLevelLabel";
+            this.spellLevelLabel.Size = new System.Drawing.Size(70, 34);
+            this.spellLevelLabel.TabIndex = 30;
+            this.spellLevelLabel.Text = "Level";
             // 
             // spellbookMenu
             // 
@@ -631,9 +709,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.rightpagepanel.ResumeLayout(false);
             this.rightpagepanel.PerformLayout();
+            this.statsPanel.ResumeLayout(false);
             this.modpanel.ResumeLayout(false);
             this.modpanel.PerformLayout();
-            this.statsPanel.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -681,6 +761,12 @@
         private System.Windows.Forms.Label spellsKnowLabel;
         private System.Windows.Forms.Label spellSaveDC;
         private System.Windows.Forms.Label spellattackmodlabel;
+        private System.Windows.Forms.Label availableSpells;
+        private System.Windows.Forms.ListBox SpellList;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label spellNameLabel;
+        private System.Windows.Forms.ListBox spellLevelList;
+        private System.Windows.Forms.Label spellLevelLabel;
     }
 }
 
