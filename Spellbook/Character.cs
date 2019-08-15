@@ -11,7 +11,7 @@ namespace Spellbook
         private string name;
         private int lvl;
         private CharacterClass selectedClass;
-        private Spell[] spellbook;
+        private Spell[] playerSpellbook;
 
         public Character()
         {

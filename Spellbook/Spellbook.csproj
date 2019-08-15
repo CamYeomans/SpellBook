@@ -82,6 +82,7 @@
     <Compile Include="Rogue.cs" />
     <Compile Include="Sorcerer.cs" />
     <Compile Include="Spell.cs" />
+    <Compile Include="Spellbook.cs" />
     <Compile Include="Warlock.cs" />
     <Compile Include="Wizard.cs" />
     <EmbeddedResource Include="Form1.resx">
