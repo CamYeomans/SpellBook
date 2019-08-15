@@ -17,6 +17,7 @@ namespace Spellbook
     {
         string gamestate;
         Character playerCharacter = new Character();
+        Spellbook completeSpellList = new Spellbook();
 
         public spellbookMenu()
         {
@@ -101,6 +102,7 @@ namespace Spellbook
                 selectedClass.Text = "";
                 playerCharacter = new Character();
                 statsPanel.Visible = false;
+                spellgrid.Visible = false;
             }
             
         }
@@ -282,7 +284,7 @@ namespace Spellbook
                 spellsKnowLabel.Text = "Spells Known:\n" + playerCharacter.GetCharClass().getTotalSpellsKnown(playerCharacter.getLevel()).ToString();
                 cantripsKnownLabel.Text = "Cantrips Known:\n" + playerCharacter.GetCharClass().getspellslots(playerCharacter.getLevel(), 0);
                 statsPanel.Visible = true;
-                tableLayoutPanel1.Visible = true;
+                spellgrid.Visible = true;
                 availableSpells.Visible = true;
             }
         }

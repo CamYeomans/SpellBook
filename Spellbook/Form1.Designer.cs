@@ -60,6 +60,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.createdCharName = new System.Windows.Forms.Label();
             this.rightpagepanel = new System.Windows.Forms.Panel();
+            this.spellgrid = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.availableSpells = new System.Windows.Forms.Label();
             this.statsPanel = new System.Windows.Forms.Panel();
             this.spellattackmodlabel = new System.Windows.Forms.Label();
@@ -70,11 +73,6 @@
             this.enterMod = new System.Windows.Forms.Button();
             this.modBox = new System.Windows.Forms.TextBox();
             this.modifierLabel = new System.Windows.Forms.Label();
-            this.SpellList = new System.Windows.Forms.ListBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.spellNameLabel = new System.Windows.Forms.Label();
-            this.spellLevelList = new System.Windows.Forms.ListBox();
-            this.spellLevelLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
@@ -92,9 +90,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.rightpagepanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spellgrid)).BeginInit();
             this.statsPanel.SuspendLayout();
             this.modpanel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // newChar
@@ -494,7 +492,7 @@
             // rightpagepanel
             // 
             this.rightpagepanel.BackColor = System.Drawing.Color.Transparent;
-            this.rightpagepanel.Controls.Add(this.tableLayoutPanel1);
+            this.rightpagepanel.Controls.Add(this.spellgrid);
             this.rightpagepanel.Controls.Add(this.availableSpells);
             this.rightpagepanel.Controls.Add(this.statsPanel);
             this.rightpagepanel.Controls.Add(this.modpanel);
@@ -505,6 +503,28 @@
             this.rightpagepanel.Size = new System.Drawing.Size(413, 669);
             this.rightpagepanel.TabIndex = 5;
             this.rightpagepanel.Visible = false;
+            // 
+            // spellgrid
+            // 
+            this.spellgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.spellgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.Level});
+            this.spellgrid.Location = new System.Drawing.Point(190, 462);
+            this.spellgrid.Name = "spellgrid";
+            this.spellgrid.RowTemplate.Height = 24;
+            this.spellgrid.Size = new System.Drawing.Size(240, 150);
+            this.spellgrid.TabIndex = 27;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            // 
+            // Level
+            // 
+            this.Level.HeaderText = "Level";
+            this.Level.Name = "Level";
             // 
             // availableSpells
             // 
@@ -607,64 +627,6 @@
             this.modifierLabel.TabIndex = 20;
             this.modifierLabel.Text = "Please enter your character\'s PLACEHOLDER modifier\r\n";
             // 
-            // SpellList
-            // 
-            this.SpellList.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpellList.FormattingEnabled = true;
-            this.SpellList.ItemHeight = 24;
-            this.SpellList.Location = new System.Drawing.Point(3, 53);
-            this.SpellList.Name = "SpellList";
-            this.SpellList.Size = new System.Drawing.Size(94, 28);
-            this.SpellList.TabIndex = 27;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.SpellList, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.spellNameLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.spellLevelList, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.spellLevelLabel, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(175, 461);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 28;
-            this.tableLayoutPanel1.Visible = false;
-            // 
-            // spellNameLabel
-            // 
-            this.spellNameLabel.AutoSize = true;
-            this.spellNameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellNameLabel.Location = new System.Drawing.Point(3, 0);
-            this.spellNameLabel.Name = "spellNameLabel";
-            this.spellNameLabel.Size = new System.Drawing.Size(74, 34);
-            this.spellNameLabel.TabIndex = 28;
-            this.spellNameLabel.Text = "Name";
-            // 
-            // spellLevelList
-            // 
-            this.spellLevelList.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellLevelList.FormattingEnabled = true;
-            this.spellLevelList.ItemHeight = 24;
-            this.spellLevelList.Location = new System.Drawing.Point(103, 53);
-            this.spellLevelList.Name = "spellLevelList";
-            this.spellLevelList.Size = new System.Drawing.Size(94, 28);
-            this.spellLevelList.TabIndex = 29;
-            // 
-            // spellLevelLabel
-            // 
-            this.spellLevelLabel.AutoSize = true;
-            this.spellLevelLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spellLevelLabel.Location = new System.Drawing.Point(103, 0);
-            this.spellLevelLabel.Name = "spellLevelLabel";
-            this.spellLevelLabel.Size = new System.Drawing.Size(70, 34);
-            this.spellLevelLabel.TabIndex = 30;
-            this.spellLevelLabel.Text = "Level";
-            // 
             // spellbookMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -709,11 +671,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.rightpagepanel.ResumeLayout(false);
             this.rightpagepanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spellgrid)).EndInit();
             this.statsPanel.ResumeLayout(false);
             this.modpanel.ResumeLayout(false);
             this.modpanel.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -762,11 +723,9 @@
         private System.Windows.Forms.Label spellSaveDC;
         private System.Windows.Forms.Label spellattackmodlabel;
         private System.Windows.Forms.Label availableSpells;
-        private System.Windows.Forms.ListBox SpellList;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label spellNameLabel;
-        private System.Windows.Forms.ListBox spellLevelList;
-        private System.Windows.Forms.Label spellLevelLabel;
+        private System.Windows.Forms.DataGridView spellgrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Level;
     }
 }
 
