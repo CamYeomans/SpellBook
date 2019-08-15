@@ -47,6 +47,7 @@
             this.flavortxt = new System.Windows.Forms.Label();
             this.selectedClass = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -56,15 +57,24 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.createdCharName = new System.Windows.Forms.Label();
             this.rightpagepanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.modifierLabel = new System.Windows.Forms.Label();
+            this.modBox = new System.Windows.Forms.TextBox();
+            this.modpanel = new System.Windows.Forms.Panel();
+            this.enterMod = new System.Windows.Forms.Button();
+            this.statsPanel = new System.Windows.Forms.Panel();
+            this.spellsKnowLabel = new System.Windows.Forms.Label();
+            this.cantripsKnownLabel = new System.Windows.Forms.Label();
+            this.spellSaveDC = new System.Windows.Forms.Label();
+            this.spellattackmodlabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
             this.levelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -74,9 +84,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.rightpagepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.rightpagepanel.SuspendLayout();
+            this.modpanel.SuspendLayout();
+            this.statsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // newChar
@@ -227,7 +238,7 @@
             this.levelPanel.Controls.Add(this.CharnameLabel);
             this.levelPanel.Controls.Add(this.pickALevel);
             this.levelPanel.Controls.Add(this.levelInput);
-            this.levelPanel.Location = new System.Drawing.Point(3, 630);
+            this.levelPanel.Location = new System.Drawing.Point(0, 630);
             this.levelPanel.Name = "levelPanel";
             this.levelPanel.Size = new System.Drawing.Size(575, 194);
             this.levelPanel.TabIndex = 17;
@@ -250,7 +261,7 @@
             this.charnameInput.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.charnameInput.Location = new System.Drawing.Point(0, 129);
             this.charnameInput.Name = "charnameInput";
-            this.charnameInput.Size = new System.Drawing.Size(230, 38);
+            this.charnameInput.Size = new System.Drawing.Size(281, 38);
             this.charnameInput.TabIndex = 18;
             // 
             // CharnameLabel
@@ -259,9 +270,9 @@
             this.CharnameLabel.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CharnameLabel.Location = new System.Drawing.Point(-3, 92);
             this.CharnameLabel.Name = "CharnameLabel";
-            this.CharnameLabel.Size = new System.Drawing.Size(179, 34);
+            this.CharnameLabel.Size = new System.Drawing.Size(289, 34);
             this.CharnameLabel.TabIndex = 17;
-            this.CharnameLabel.Text = "Enter your name";
+            this.CharnameLabel.Text = "Enter your character\'s name";
             // 
             // pickALevel
             // 
@@ -279,7 +290,7 @@
             this.levelInput.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levelInput.Location = new System.Drawing.Point(0, 37);
             this.levelInput.Name = "levelInput";
-            this.levelInput.Size = new System.Drawing.Size(230, 38);
+            this.levelInput.Size = new System.Drawing.Size(281, 38);
             this.levelInput.TabIndex = 15;
             // 
             // flavortxt
@@ -317,6 +328,19 @@
             this.pictureBox12.TabIndex = 12;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::Spellbook.Properties.Resources.cleric;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.ImageLocation = "";
+            this.pictureBox11.Location = new System.Drawing.Point(287, 26);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(136, 135);
+            this.pictureBox11.TabIndex = 11;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // pictureBox10
             // 
@@ -435,27 +459,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // createdCharName
-            // 
-            this.createdCharName.AutoSize = true;
-            this.createdCharName.Font = new System.Drawing.Font("Monotype Corsiva", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createdCharName.Location = new System.Drawing.Point(250, 100);
-            this.createdCharName.Name = "createdCharName";
-            this.createdCharName.Size = new System.Drawing.Size(407, 46);
-            this.createdCharName.TabIndex = 4;
-            this.createdCharName.Text = "Placeholder the level 69 dude";
-            this.createdCharName.Visible = false;
-            // 
-            // rightpagepanel
-            // 
-            this.rightpagepanel.BackColor = System.Drawing.Color.Transparent;
-            this.rightpagepanel.Controls.Add(this.createdCharName);
-            this.rightpagepanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightpagepanel.Location = new System.Drawing.Point(542, 0);
-            this.rightpagepanel.Name = "rightpagepanel";
-            this.rightpagepanel.Size = new System.Drawing.Size(413, 669);
-            this.rightpagepanel.TabIndex = 5;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -470,18 +473,119 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox11
+            // createdCharName
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::Spellbook.Properties.Resources.cleric;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.ImageLocation = "";
-            this.pictureBox11.Location = new System.Drawing.Point(287, 26);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(136, 135);
-            this.pictureBox11.TabIndex = 11;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            this.createdCharName.AutoSize = true;
+            this.createdCharName.Font = new System.Drawing.Font("Monotype Corsiva", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createdCharName.Location = new System.Drawing.Point(175, 75);
+            this.createdCharName.Name = "createdCharName";
+            this.createdCharName.Size = new System.Drawing.Size(407, 46);
+            this.createdCharName.TabIndex = 4;
+            this.createdCharName.Text = "Placeholder the level 69 dude";
+            this.createdCharName.Visible = false;
+            // 
+            // rightpagepanel
+            // 
+            this.rightpagepanel.BackColor = System.Drawing.Color.Transparent;
+            this.rightpagepanel.Controls.Add(this.statsPanel);
+            this.rightpagepanel.Controls.Add(this.modpanel);
+            this.rightpagepanel.Controls.Add(this.createdCharName);
+            this.rightpagepanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightpagepanel.Location = new System.Drawing.Point(542, 0);
+            this.rightpagepanel.Name = "rightpagepanel";
+            this.rightpagepanel.Size = new System.Drawing.Size(413, 669);
+            this.rightpagepanel.TabIndex = 5;
+            this.rightpagepanel.Visible = false;
+            // 
+            // modifierLabel
+            // 
+            this.modifierLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifierLabel.Location = new System.Drawing.Point(-4, 0);
+            this.modifierLabel.Name = "modifierLabel";
+            this.modifierLabel.Size = new System.Drawing.Size(285, 135);
+            this.modifierLabel.TabIndex = 20;
+            this.modifierLabel.Text = "Please enter your character\'s PLACEHOLDER modifier\r\n";
+            // 
+            // modBox
+            // 
+            this.modBox.BackColor = System.Drawing.SystemColors.Info;
+            this.modBox.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modBox.Location = new System.Drawing.Point(0, 73);
+            this.modBox.Name = "modBox";
+            this.modBox.Size = new System.Drawing.Size(281, 38);
+            this.modBox.TabIndex = 19;
+            // 
+            // modpanel
+            // 
+            this.modpanel.Controls.Add(this.enterMod);
+            this.modpanel.Controls.Add(this.modBox);
+            this.modpanel.Controls.Add(this.modifierLabel);
+            this.modpanel.Location = new System.Drawing.Point(183, 150);
+            this.modpanel.Name = "modpanel";
+            this.modpanel.Size = new System.Drawing.Size(402, 135);
+            this.modpanel.TabIndex = 21;
+            // 
+            // enterMod
+            // 
+            this.enterMod.Location = new System.Drawing.Point(312, 3);
+            this.enterMod.Name = "enterMod";
+            this.enterMod.Size = new System.Drawing.Size(75, 108);
+            this.enterMod.TabIndex = 21;
+            this.enterMod.Text = "Continue";
+            this.enterMod.UseVisualStyleBackColor = true;
+            this.enterMod.Click += new System.EventHandler(this.modClick);
+            // 
+            // statsPanel
+            // 
+            this.statsPanel.Controls.Add(this.spellattackmodlabel);
+            this.statsPanel.Controls.Add(this.spellSaveDC);
+            this.statsPanel.Controls.Add(this.cantripsKnownLabel);
+            this.statsPanel.Controls.Add(this.spellsKnowLabel);
+            this.statsPanel.Location = new System.Drawing.Point(175, 300);
+            this.statsPanel.Name = "statsPanel";
+            this.statsPanel.Size = new System.Drawing.Size(627, 139);
+            this.statsPanel.TabIndex = 22;
+            this.statsPanel.Visible = false;
+            // 
+            // spellsKnowLabel
+            // 
+            this.spellsKnowLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellsKnowLabel.Location = new System.Drawing.Point(-4, 0);
+            this.spellsKnowLabel.Name = "spellsKnowLabel";
+            this.spellsKnowLabel.Size = new System.Drawing.Size(100, 135);
+            this.spellsKnowLabel.TabIndex = 22;
+            this.spellsKnowLabel.Text = "Spells Known:";
+            this.spellsKnowLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cantripsKnownLabel
+            // 
+            this.cantripsKnownLabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantripsKnownLabel.Location = new System.Drawing.Point(102, 0);
+            this.cantripsKnownLabel.Name = "cantripsKnownLabel";
+            this.cantripsKnownLabel.Size = new System.Drawing.Size(100, 135);
+            this.cantripsKnownLabel.TabIndex = 23;
+            this.cantripsKnownLabel.Text = "Cantrips Known:";
+            this.cantripsKnownLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // spellSaveDC
+            // 
+            this.spellSaveDC.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellSaveDC.Location = new System.Drawing.Point(190, 0);
+            this.spellSaveDC.Name = "spellSaveDC";
+            this.spellSaveDC.Size = new System.Drawing.Size(133, 135);
+            this.spellSaveDC.TabIndex = 24;
+            this.spellSaveDC.Text = "Spell save DC:";
+            this.spellSaveDC.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // spellattackmodlabel
+            // 
+            this.spellattackmodlabel.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spellattackmodlabel.Location = new System.Drawing.Point(320, 0);
+            this.spellattackmodlabel.Name = "spellattackmodlabel";
+            this.spellattackmodlabel.Size = new System.Drawing.Size(133, 135);
+            this.spellattackmodlabel.TabIndex = 25;
+            this.spellattackmodlabel.Text = "Spell Attack Modifier:";
+            this.spellattackmodlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // spellbookMenu
             // 
@@ -514,6 +618,7 @@
             this.levelPanel.ResumeLayout(false);
             this.levelPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -523,10 +628,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.rightpagepanel.ResumeLayout(false);
             this.rightpagepanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.modpanel.ResumeLayout(false);
+            this.modpanel.PerformLayout();
+            this.statsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -565,6 +672,15 @@
         private System.Windows.Forms.Panel rightpagepanel;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label modifierLabel;
+        private System.Windows.Forms.TextBox modBox;
+        private System.Windows.Forms.Panel modpanel;
+        private System.Windows.Forms.Button enterMod;
+        private System.Windows.Forms.Panel statsPanel;
+        private System.Windows.Forms.Label cantripsKnownLabel;
+        private System.Windows.Forms.Label spellsKnowLabel;
+        private System.Windows.Forms.Label spellSaveDC;
+        private System.Windows.Forms.Label spellattackmodlabel;
     }
 }
 

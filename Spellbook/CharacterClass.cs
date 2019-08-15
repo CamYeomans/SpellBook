@@ -10,13 +10,35 @@ namespace Spellbook
     {
         private int spellSaveDC;
         private int spellAttackMod;
-        private int[] profBonus = new int[] { 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6 };
+        private int[] profBonus = new int[] {0, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6 };
         private string flavortxt;
-        private string spellcastingAbility;
+        private string spellcastingAbility = "spellcasting";
+        private int spellcastingAbilityValue = 0;
         private string spellList;
         private int totalspellsKnown;
         //2d array used for determining the level and number of spell slots characters have
-        private int[,] spellslotchart;
+        private int[,] spellslotchart = new int[20, 10] {
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0},
+        };
 
         /// <summary>
         /// this method is used to get the flavor text for each class
@@ -33,6 +55,16 @@ namespace Spellbook
             flavortxt = newFlavorText;
         }
 
+        public int getSpellcastingAbilityValue()
+        {
+            return spellcastingAbilityValue;
+        }
+
+        public void setSpellAbilityValue(int newvalue)
+        {
+            spellcastingAbilityValue = newvalue;
+        }
+
         /// <summary>
         /// this is used when getting the name of each class
         /// </summary>
@@ -47,6 +79,12 @@ namespace Spellbook
         /// <returns></returns>
         public abstract int getTotalSpellsKnown(int classLevel);
      
+
+        public int getProfBonus(int level)
+        {
+            return profBonus[level];
+        }
+
         /// <summary>
         /// used to aquire the spellcasting ab for things like damage calculation 
         /// </summary>

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Spellbook
 {
@@ -37,6 +38,7 @@ namespace Spellbook
             classList.Left = 25;
             classList.Top = 75;
             rightpagepanel.Width = this.Width / 2;
+            selectedClass.Text = "";
         }
 
         private void Title_Click(object sender, EventArgs e)
@@ -94,6 +96,11 @@ namespace Spellbook
                 classList.Visible = false;
                 rightpagepanel.Visible = false;
                 this.BackgroundImage = Properties.Resources.book;
+                charnameInput.Text = "";
+                levelInput.Text = "";
+                selectedClass.Text = "";
+                playerCharacter = new Character();
+                statsPanel.Visible = false;
             }
             
         }
@@ -229,17 +236,53 @@ namespace Spellbook
                 }else if(charnameInput.Text.Equals(""))
                 {
                     System.Windows.Forms.MessageBox.Show("Your name cannot be blank");
+                }else if(selectedClass.Text == "")
+                {
+                    System.Windows.Forms.MessageBox.Show("You must select a class");
                 }
                 else {
                     playerCharacter.setClass(selectedClass.Text);
                     playerCharacter.setLevel(inputvalue);
                     playerCharacter.setName(charnameInput.Text);
                     createdCharName.Text = playerCharacter.getName() + " the level " + playerCharacter.getLevel().ToString() + " " + playerCharacter.getClass().ToString();
+                    modifierLabel.Text = "Please enter your character's " + playerCharacter.getClass().getSpellcastingAbility() + " modifier";
                     createdCharName.Visible = true;
+                    rightpagepanel.Visible = true;
                 }
             }
         }
 
-        
+        private void modClick(object sender, EventArgs e)
+        {
+            var regex = @"^(\+|-)?\d?\d$";
+            Match match = Regex.Match(modBox.Text, regex, RegexOptions.IgnoreCase);
+
+            if (modBox.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Please enter your character's spellcasting modifier\nexamples:\n+5\n-3\n0");
+            }else if (!match.Success)
+            {
+                System.Windows.Forms.MessageBox.Show("Please enter a valid spellcasting modifier\nexamples:\n+5\n-3\n0");
+            }
+            else
+            {
+                int charvalue;
+                if (modBox.Text[0] == '+')
+                {
+                    Int32.TryParse(modBox.Text.Substring(1),out charvalue);
+                    playerCharacter.GetCharClass().setSpellAbilityValue(charvalue);
+                }
+                else
+                {
+                    Int32.TryParse(modBox.Text.Substring(1), out charvalue);
+                    playerCharacter.GetCharClass().setSpellAbilityValue(charvalue);
+                }
+                spellSaveDC.Text = "Spell save DC:\n" + (playerCharacter.GetCharClass().getSpellcastingAbilityValue() + 8 + playerCharacter.GetCharClass().getProfBonus(playerCharacter.getLevel())).ToString();
+                spellattackmodlabel.Text = "Spell attack modifier:\n" + (playerCharacter.GetCharClass().getSpellcastingAbilityValue() + playerCharacter.GetCharClass().getProfBonus(playerCharacter.getLevel())).ToString();
+                spellsKnowLabel.Text = "Spells Known:\n" + playerCharacter.GetCharClass().getTotalSpellsKnown(playerCharacter.getLevel()).ToString();
+                cantripsKnownLabel.Text = "Cantrips Known:\n" + playerCharacter.GetCharClass().getspellslots(playerCharacter.getLevel(), 0);
+                statsPanel.Visible = true;
+            }
+        }
     }
 }

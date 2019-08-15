@@ -72,39 +72,43 @@ namespace Spellbook
             }
             else if (charClass == "The Cleric")
             {
-
+                selectedClass = new Cleric(lvl);
             }
             else if (charClass == "The Druid")
             {
-
+                selectedClass = new Druid(lvl);
             }
             else if (charClass == "The Fighter")
             {
-
+                selectedClass = new Fighter(lvl);
             }
             else if (charClass == "The Monk")
             {
-
+                selectedClass = new Monk(lvl);
             }
             else if (charClass == "The Paladin")
             {
-
+                selectedClass = new Paladin(lvl);
             }
             else if (charClass == "The Ranger")
             {
-
+                selectedClass = new Ranger(lvl);
             }
             else if (charClass == "The Rogue")
             {
-
+                selectedClass = new Rogue(lvl);
             }
             else if (charClass == "The Sorcerer")
             {
-
+                selectedClass = new Sorcerer(lvl);
             }
             else if (charClass == "The Warlock")
             {
-
+                selectedClass = new Warlock(lvl);
+            }
+            else if (charClass == "The Wizard")
+            {
+                selectedClass = new Wizard(lvl);
             }
             else { }
         }
