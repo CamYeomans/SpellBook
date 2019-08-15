@@ -16,8 +16,11 @@ namespace Spellbook
         public string components { get; set; } 
         public string duration { get; set; }
         public string[] classes { get; set; }
-        public string text { get; set; }
-        public string roll { get; set; }
+        public string roll = "";
+
+        private string text ="";
+
+        
 
 
         public Spell(string newname, int newlevel, string newschool, string newtime, string newrange, string newcomponents, string newduration, string[] newclasses, string newtext)
@@ -30,7 +33,34 @@ namespace Spellbook
             components = newcomponents;
             duration = newduration;
             classes = newclasses;
-            text = newtext;
+            text = text + "\n" + newtext;
         }
+
+        public Spell()
+        {
+
+        }
+
+        public string getText()
+        {
+            return text;
+        }
+
+        public string getRoll()
+        {
+            return roll;
+        }
+
+        public void setText(string newText)
+        {
+            text = text + newText;
+        }
+
+        public void setRoll(string newRoll)
+        {
+            roll = roll + "\n" + newRoll;
+        }
+
+
     }
 }

@@ -171,7 +171,7 @@
     <Content Include="EE Spells 2.6.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="PHBSpells 3.9.0.xml">
+    <Content Include="PHBSpells.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XGTESpells.xml">

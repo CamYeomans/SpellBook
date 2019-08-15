@@ -60,9 +60,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.createdCharName = new System.Windows.Forms.Label();
             this.rightpagepanel = new System.Windows.Forms.Panel();
-            this.spellgrid = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.availableSpells = new System.Windows.Forms.Label();
             this.statsPanel = new System.Windows.Forms.Panel();
             this.spellattackmodlabel = new System.Windows.Forms.Label();
@@ -90,7 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.rightpagepanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spellgrid)).BeginInit();
             this.statsPanel.SuspendLayout();
             this.modpanel.SuspendLayout();
             this.SuspendLayout();
@@ -492,7 +488,6 @@
             // rightpagepanel
             // 
             this.rightpagepanel.BackColor = System.Drawing.Color.Transparent;
-            this.rightpagepanel.Controls.Add(this.spellgrid);
             this.rightpagepanel.Controls.Add(this.availableSpells);
             this.rightpagepanel.Controls.Add(this.statsPanel);
             this.rightpagepanel.Controls.Add(this.modpanel);
@@ -503,28 +498,6 @@
             this.rightpagepanel.Size = new System.Drawing.Size(413, 669);
             this.rightpagepanel.TabIndex = 5;
             this.rightpagepanel.Visible = false;
-            // 
-            // spellgrid
-            // 
-            this.spellgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.spellgrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
-            this.Level});
-            this.spellgrid.Location = new System.Drawing.Point(190, 462);
-            this.spellgrid.Name = "spellgrid";
-            this.spellgrid.RowTemplate.Height = 24;
-            this.spellgrid.Size = new System.Drawing.Size(240, 150);
-            this.spellgrid.TabIndex = 27;
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            // 
-            // Level
-            // 
-            this.Level.HeaderText = "Level";
-            this.Level.Name = "Level";
             // 
             // availableSpells
             // 
@@ -671,7 +644,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.rightpagepanel.ResumeLayout(false);
             this.rightpagepanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.spellgrid)).EndInit();
             this.statsPanel.ResumeLayout(false);
             this.modpanel.ResumeLayout(false);
             this.modpanel.PerformLayout();
@@ -723,9 +695,6 @@
         private System.Windows.Forms.Label spellSaveDC;
         private System.Windows.Forms.Label spellattackmodlabel;
         private System.Windows.Forms.Label availableSpells;
-        private System.Windows.Forms.DataGridView spellgrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Level;
     }
 }
 
