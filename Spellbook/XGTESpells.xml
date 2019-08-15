@@ -56,7 +56,6 @@
     <text>Wedding: You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed.</text>
     <text />
     <text>This spell can be found in Xanathar's Guide to Everything</text>
-    <roll></roll>
   </spell>
   <spell>
     <name>Chaos Bolt (XGtE)</name>
@@ -106,6 +105,112 @@
     <text>You attempt to charm a creature you can see within range. It must make a Wisdom saving throw, and it does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature is friendly to you. When the spell ends, the creature knows it was charmed by you.</text>
     <text />
     <text>At Higher Levels: When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them.</text>
+    <text />
+    <text>This spell can be found in Xanathar's Guide to Everything</text>
+  </spell>
+  <spell>
+    <name>Create Homonculus (XGtE)</name>
+    <level>6</level>
+    <school>T</school>
+    <time>1 hour</time>
+    <range>Touch</range>
+    <components>V, S, M (clay, ash, and mandrake root, all of which the spell consumes, and a jewel-encrusted dagger worth at least 1,000 gp)</components>
+    <duration>instantaneous</duration>
+    <classes>Wizard</classes>
+    <text>
+      While speaking an intricate incantation, you cut yourself with a jewel-encrusted dagger, taking 2d4 piercing damage that can’t be reduced in any way. You then drip your blood on the spell’s other components and touch them, transforming them into a special construct called a homunculus. The statistics of the homunculus are in the Monster Manual. It is your faithful companion, and it dies if you die. Whenever you finish a long rest, you can spend up to half your Hit Dice if the homunculus is on the same plane of existence as you. When you do so, roll each die and add your Constitution modifier to it. Your hit point maximum is reduced by the total, and the homunculus’s hit point maximum and current hit points are
+      both increased by it. This process can reduce you to no lower than 1 hit point. and the change to your and the homunculus’s hit points ends when you finish your next long rest. The reduction to your hit point maximum can’t be removed by any means before then, except by the homunculus‘s death. You can have only one homunculus at a time. If you cast this spell while your homunculus lives, the spell fails.</text>
+    <text />
+    <text>This spell can be found in Xanathar's Guide to Everything</text>
+    <roll>2d4</roll>
+  </spell>
+  <spell>
+    <name>Crown of Stars (XGtE)</name>
+    <level>7</level>
+    <school>EV</school>
+    <time>1 action</time>
+    <range>Self</range>
+    <components>V, S</components>
+    <duration>1 hour</duration>
+    <classes>Sorcerer, Warlock, Wizard</classes>
+    <text>Seven star-like motes of light appear and orbit your head until the spell ends. You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. When you do so, make a ranged spell attack. On a hit. the target takes 4d12 radiant damage. Whether you hit or miss, the mote is expended. The spell ends early if you expend the last mote. If you have four or more motes remaining, they shed bright light in a 30-foot radius and dim light for an additional 30 feet. Ifyou have one to three motes remaining, they shed dim light in a 30—foot radius.</text>
+    <text />
+    <text>At Higher Levels: When you cast this spell using a spell slot of 8th level or higher, the number of motes created increases by two for each slot level above 7th.</text>
+    <text />
+    <text>This spell can be found in Xanathar's Guide to Everything</text>
+    <roll>4d12</roll>
+  </spell>
+  <spell>
+    <name>Danse Macabre (XGtE)</name>
+    <level>5</level>
+    <school>N</school>
+    <time>1 action</time>
+    <range>60 feet</range>
+    <components>V, S</components>
+    <duration>Concentration, up to 1 hour</duration>
+    <classes>Warlock, Wizard</classes>
+    <text>
+      Threads of dark power leap from your fingers to pierce up to five Small or Medium corpses you can see within range. Each corpse immediately stands up and becomes undead. You decide whether it is a zombie or a skeleton (the statistics for zombies and skeletons are in the Monster Manual), and it gains a bonus to its attack and damage rolls equal to your spellcasting ability modifier. You can use a bonus action to mentally command the creatures you make with this spell, issuing the same command to all of them. To receive the command, a creature must be within 60 feet of you. You decide what action the creatures will take and where they will move during their next turn, or you can issue a general command, such as to guard a chamber or passageway against your foes. lfyou issue no commands, the creatures do nothing except defend themselves against hostile creatures. Once given an order, the creatures continue to follow it until their task is complete.
+      The creatures are under your control until the spell ends, after which they become inanimate once more.</text>
+    <text />
+    <text>At Higher Levels: When you cast this spell using a spell slot‘ of 6th level or higher, you animate up to two additional corpses for each slot level above 5th.</text>
+    <text />
+    <text>This spell can be found in Xanathar's Guide to Everything</text>
+  </spell>
+  <spell>
+    <name>Dawn (XGtE)</name>
+    <level>5</level>
+    <school>EV</school>
+    <time>1 action</time>
+    <range>60 feet</range>
+    <components>V, S, M (a sunburst pendant worth at least 100 gp)</components>
+    <duration>Concentration, up to 1 minute</duration>
+    <classes>Cleric, Wizard</classes>
+    <text>The light of dawn shines down on a location you specify within range. Until the spell ends, a 30-foot-radius.40-foot-high cylinder of bright light glimmers there. This light is sunlight. When the cylinder appears, each creature in it must make a Constitution saving throw, taking 4d10 radiant damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw whenever it ends its turn in the cylinder. If you’re within 60 feet of the cylinder, you can move it up to 60 feet as a bonus action on your turn.</text>
+    <text />
+    <text>This spell can be found in Xanathar's Guide to Everything</text>
+    <roll>4d10</roll>
+  </spell>
+  <spell>
+    <name>Dragon's Breath (XGtE)</name>
+    <level>2</level>
+    <school>T</school>
+    <time>1 bonus action</time>
+    <range>Touch</range>
+    <components>V, S, M (a hot pepper)</components>
+    <duration>Concentration, up to 1 hour</duration>
+    <classes>Sorcerer, Wizard</classes>
+    <text>You touch one willing creature and imbue it with the power to spew magical energy from its mouth, provided it has one. Choose acid, cold, fire, lightning, or poison. Until the spell ends, the creature can use an action to exhale energy of the chosen type in a 15-foot cone. Each creature in that area must make a Dexterity saving throw, taking 3d6 damage of the chosen type on a failed save, or half as much damage on a successful one.</text>
+    <text />
+    <text>At Higher Levels: When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd.</text>
+    <text />
+    <text>This spell can be found in Xanathar's Guide to Everything</text>
+    <roll>3d6</roll>
+  </spell>
+  <spell>
+    <name>Druid Grove (XGtE)</name>
+    <level>6</level>
+    <school>A</school>
+    <time>10 minutes</time>
+    <range>Touch</range>
+    <components>V, S, M (mistletoe, which the spell consumes, that was harvested with a golden sickle under the light of a full moon)</components>
+    <duration>24 hours</duration>
+    <classes>Druid</classes>
+    <text>You invoke the spirits of nature to protect an area outdoors or underground. The area can be as small as a 30—foot cube or as large as a 90-foot cube. Buildings and other structures are excluded from the affected area. If you cast this spell in the same area every day for a year, the spell lasts until dispelled. The spell creates the following effects within the area. When you cast this spell, you can specify creatures as friends who are immune to the effects. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects. The entire warded area radiates magic. A dispel magic cast on the area, if successful, removes only one of the following effects, not the entire area. That spell’s caster chooses which effect to end. Only when all its effects are gone is this spell dispelled.</text>
+    <text />
+    <text>Solid Fog: You can fill any number of 5-foot squares on the ground with thick fog, making them heavily obscured. The fog reaches 10 feet high. In addition, every foot of movement through the fog costs 2 extra feet. To a creature immune to this effect, the fog obscures nothing and looks like soft mist, with motes of green light floating in the air.</text>
+    <text />
+    <text>Grasping Undergrowth. You can fill any number of 5-foot squares on the ground that aren’t filled with fog with grasping weeds and vines, as if they were affected by an entangle spell. To a creature immune to this effect, the weeds and vines feel soft and reshape themselves to serve as temporary seats or beds.</text>
+    <text />
+    <text>Grove Guardians. You can animate up to four trees in the area, causing them to uproot themselves from the ground. These trees have the same statistics as an awakened tree, which appears in the Monster Manual, except they can’t speak, and their bark is covered with druidic symbols. If any creature not immune to this effect enters the warded area, the grove guardians fight until they have driven off or slain the intruders. The grove guardians also obey your spoken commands (no action required by you) that you issue while in the area. Ifyou don't give them commands and no intruders are present, the grove guardians do nothing. The grove guardians can‘t leave the warded area. When the spell ends, the magic animating them disappears, and the trees take root again if possible.</text>
+    <text />
+    <text>
+      Additional Spell Effect. You can place your choice of one of the following magical effects within the warded area:
+      - A constant gust of Wind in two locations of your choice
+      - Spike growth in one location of your choice
+      - Wind wall in two locations of your choice
+      To a creature immune to this effect, the winds are a fragrant, gentle breeze, and the area of spike growth is harmless.
+    </text>
     <text />
     <text>This spell can be found in Xanathar's Guide to Everything</text>
   </spell>
