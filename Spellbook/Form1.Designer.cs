@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(spellbookMenu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.newChar = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Button();
@@ -70,6 +71,9 @@
             this.enterMod = new System.Windows.Forms.Button();
             this.modBox = new System.Windows.Forms.TextBox();
             this.modifierLabel = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SpellName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.leftpageCharacterCreate.SuspendLayout();
             this.classList.SuspendLayout();
@@ -89,6 +93,7 @@
             this.rightpagepanel.SuspendLayout();
             this.statsPanel.SuspendLayout();
             this.modpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // newChar
@@ -488,6 +493,7 @@
             // rightpagepanel
             // 
             this.rightpagepanel.BackColor = System.Drawing.Color.Transparent;
+            this.rightpagepanel.Controls.Add(this.dataGridView1);
             this.rightpagepanel.Controls.Add(this.availableSpells);
             this.rightpagepanel.Controls.Add(this.statsPanel);
             this.rightpagepanel.Controls.Add(this.modpanel);
@@ -600,6 +606,38 @@
             this.modifierLabel.TabIndex = 20;
             this.modifierLabel.Text = "Please enter your character\'s PLACEHOLDER modifier\r\n";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SpellName,
+            this.Level});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.dataGridView1.Location = new System.Drawing.Point(190, 462);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 27;
+            // 
+            // SpellName
+            // 
+            this.SpellName.HeaderText = "Name";
+            this.SpellName.Name = "SpellName";
+            // 
+            // Level
+            // 
+            this.Level.HeaderText = "Level";
+            this.Level.Name = "Level";
+            // 
             // spellbookMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -647,6 +685,7 @@
             this.statsPanel.ResumeLayout(false);
             this.modpanel.ResumeLayout(false);
             this.modpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -695,6 +734,9 @@
         private System.Windows.Forms.Label spellSaveDC;
         private System.Windows.Forms.Label spellattackmodlabel;
         private System.Windows.Forms.Label availableSpells;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SpellName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Level;
     }
 }
 
