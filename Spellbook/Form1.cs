@@ -308,7 +308,10 @@ namespace Spellbook
 
         private void spellGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show(completeSpellList.getDescription(spellGrid.SelectedCells[0].Value.ToString()));
+            if(!e.RowIndex.Equals(-1) && e.ColumnIndex.Equals(0)){
+                DataGridViewTextBoxCell cell = (DataGridViewTextBoxCell)spellGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                System.Windows.Forms.MessageBox.Show(completeSpellList.getDescription(cell.Value.ToString()));
+            }
         }
     }
 }

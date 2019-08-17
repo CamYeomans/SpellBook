@@ -93,8 +93,12 @@ namespace Spellbook
             {
                 if(spell.name == spellName)
                 {
-                    formattedText = spellName + "\nLevel: " + spell.level + "\nCasting Time:" + spell.time + "\nRange: " + spell.range +"\nComponents: ";
-                    formattedText = formattedText + spell.components + "\nDuration" + spell.duration + "\nSchool" + spell.school + "\n" + spell.getText() +"\nRoll" + spell.getRoll();
+                    formattedText = spellName + "\n\nLevel: " + spell.level + "\nCasting Time: " + spell.time + "\nRange: " + spell.range +"\nComponents: ";
+                    formattedText = formattedText + spell.components + "\nDuration: " + spell.duration + "\nSchool: " + spell.school + "\n\n" + spell.getText() ;
+                    if (!spell.getRoll().Equals(""))
+                    {
+                        formattedText = formattedText +"\nRoll: " + spell.getRoll();
+                    }
                 }
                 
             }
