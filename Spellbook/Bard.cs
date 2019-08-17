@@ -14,7 +14,7 @@ namespace Spellbook
         {
             setFlavortxt("An inspiring magician whose power echoes the music of creation");
             setSpellcastingAbility("Charisma");
-            setSpellList("bard");
+            setSpellList("Bard");
             int[,] bardChart = new int[20, 10] { 
                 {2,2,0,0,0,0,0,0,0,0},
                 {2,3,0,0,0,0,0,0,0,0},

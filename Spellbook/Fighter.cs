@@ -13,7 +13,7 @@ namespace Spellbook
         {
             setFlavortxt("A master of martial combat, skilled with a variety of weapons and armor");
             setSpellcastingAbility("Intelligence");
-            setSpellList("wizard");
+            setSpellList("Wizard");
             int[,] FighterChart = new int[20, 10] {
                 {0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0},

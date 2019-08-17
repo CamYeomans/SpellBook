@@ -18,6 +18,7 @@ namespace Spellbook
         string gamestate;
         Character playerCharacter = new Character();
         Spellbook completeSpellList = new Spellbook();
+        DataTable dt = new DataTable("SpellList");
 
         public spellbookMenu()
         {
@@ -40,6 +41,11 @@ namespace Spellbook
             classList.Top = 75;
             rightpagepanel.Width = this.Width / 2;
             selectedClass.Text = "";
+            spellGrid.DataSource = completeSpellList;
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Level", typeof(int));
+            dt.AcceptChanges();
+            spellGrid.DataSource = dt;
         }
 
         private void Title_Click(object sender, EventArgs e)
@@ -286,7 +292,21 @@ namespace Spellbook
                 statsPanel.Visible = true;
                 
                 availableSpells.Visible = true;
+
+                int highestLVLSpell = playerCharacter.GetCharClass().getHighestLevelSpell(playerCharacter.getLevel());
+                dt.Clear();
+                foreach (Spell spell in completeSpellList.GetSpells())
+                {
+                    
+                    if (spell.level <= highestLVLSpell && spell.classes.Contains(playerCharacter.GetCharClass().getSpellList()))
+                    {
+                        dt.Rows.Add(spell.name, spell.level);
+                    }
+                    
+                }
+                dt.AcceptChanges();
             }
         }
+
     }
 }

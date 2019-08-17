@@ -14,7 +14,7 @@ namespace Spellbook
         {
             setFlavortxt("A spellcaster who draws on inherent magic from a gift or bloodline");
             setSpellcastingAbility("Charisma");
-            setSpellList("sorcerer");
+            setSpellList("Sorcerer");
             int[,] sorcererChart = new int[20, 10] {
                 {4,2,0,0,0,0,0,0,0,0},
                 {4,3,0,0,0,0,0,0,0,0},

@@ -56,6 +56,11 @@ namespace Spellbook
             text = text + newText;
         }
 
+        public string[] getClasses()
+        {
+            return classes;
+        }
+
         public void setRoll(string newRoll)
         {
             roll = roll + "\n" + newRoll;

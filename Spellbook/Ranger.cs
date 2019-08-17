@@ -14,7 +14,7 @@ namespace Spellbook
         {
             setFlavortxt("A warrior who combats theats on the edges of civilization");
             setSpellcastingAbility("Wisdom");
-            setSpellList("ranger");
+            setSpellList("Ranger");
             int[,] rangerChart = new int[20, 10] {
                 {0,0,0,0,0,0,0,0,0,0},
                 {0,2,0,0,0,0,0,0,0,0},

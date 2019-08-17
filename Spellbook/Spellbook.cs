@@ -27,32 +27,8 @@ namespace Spellbook
             GenerateSpellBook(xgte);
         }
 
-        public static void OrderByName()
-        {
-            HashSet<Spell> tempSpellList = new HashSet<Spell>();
-            IEnumerable<Spell> query = spellList.OrderBy(spell => spell.name);
-            foreach (Spell spell in query)
-            {
-                tempSpellList.Add(spell);
-            }
-            spellList.Clear();
-            foreach (Spell spell in query)
-            {
-                spellList.Add(spell);
-            }
-            
-        }
+       
 
-        public static void OrderByLevel()
-        {
-            HashSet<Spell> tempSpellList = new HashSet<Spell>();
-            IEnumerable<Spell> query = spellList.OrderBy(spell => spell.level);
-            foreach (Spell spell in query)
-            {
-                tempSpellList.Add(spell);
-            }
-            spellList = tempSpellList;
-        }
 
         private void GenerateSpellBook(XmlDocument xmlDoc)
         {
@@ -97,7 +73,7 @@ namespace Spellbook
                     }
                     else if (individualSpelNodeList[j].Name == "classes")
                     {
-                        importedSpell.classes = individualSpelNodeList[j].InnerText.Split(',');
+                        importedSpell.classes = individualSpelNodeList[j].InnerText.Replace(" ","").Split(',');
                     }
                     else if (individualSpelNodeList[j].Name == "roll")
                     {

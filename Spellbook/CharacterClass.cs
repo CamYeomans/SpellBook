@@ -133,7 +133,7 @@ namespace Spellbook
         /// <returns></returns>
         public int getspellslots(int playerLevel, int spellLevel)
         {
-            return spellslotchart[playerLevel,spellLevel];
+            return spellslotchart[playerLevel-1,spellLevel];
         }
 
         /// <summary>
@@ -143,13 +143,13 @@ namespace Spellbook
         /// <returns></returns>
         public int getHighestLevelSpell(int playerLevel)
         {
-            int spellLevel = 0;
-            while (getspellslots(playerLevel, spellLevel) != 0)
+            int highestSpell = 9;
+            while (getspellslots(playerLevel, highestSpell) == 0)
             {
-                spellLevel++;
+                highestSpell--;
             }
-
-            return spellLevel;
+            return highestSpell;
+            
         }
 
     }

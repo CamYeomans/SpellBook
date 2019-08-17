@@ -14,7 +14,7 @@ namespace Spellbook
         {
             setFlavortxt("A scoundrel who uses stealth and trickery to overcome obstacles and enemies");
             setSpellcastingAbility("Intelligence");
-            setSpellList("wizard");
+            setSpellList("Wizard");
             int[,] rogueChart = new int[20, 10] {
                 {0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0},

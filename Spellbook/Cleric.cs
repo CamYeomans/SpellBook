@@ -14,7 +14,7 @@ namespace Spellbook
 
             setFlavortxt("A priestly champion who wields divine magic in service of higher power");
             setSpellcastingAbility("Wisdom");
-            setSpellList("cleric");
+            setSpellList("Cleric");
             int[,] clericChart = new int[20, 10] {
                 {3,2,0,0,0,0,0,0,0,0},
                 {3,3,0,0,0,0,0,0,0,0},

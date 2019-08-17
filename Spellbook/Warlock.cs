@@ -14,7 +14,7 @@ namespace Spellbook
         {
             setFlavortxt("A wielder of magic that is derived from a bargain with an extraplanar entity");
             setSpellcastingAbility("Charisma");
-            setSpellList("warlock");
+            setSpellList("Warlock");
             int[,] warlockChart = new int[20, 10] {
                 {2,1,0,0,0,0,0,0,0,0},
                 {2,2,0,0,0,0,0,0,0,0},

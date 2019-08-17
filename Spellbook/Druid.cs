@@ -13,7 +13,7 @@ namespace Spellbook
         {
             setFlavortxt("A priest of the old faith, wielding the powers of nature and adopting animal forms");
             setSpellcastingAbility("Wisdom");
-            setSpellList("druid");
+            setSpellList("Druid");
             int[,] druidChart = new int[20, 10] {
                 {2,2,0,0,0,0,0,0,0,0},
                 {2,3,0,0,0,0,0,0,0,0},

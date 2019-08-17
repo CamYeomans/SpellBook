@@ -12,7 +12,7 @@ namespace Spellbook
         {
             setFlavortxt("A holy warrior bound to a sacred oath");
             setSpellcastingAbility("Charisma");
-            setSpellList("paladin");
+            setSpellList("Paladin");
             int[,] palyChart = new int[20, 10] {
                 {0,0,0,0,0,0,0,0,0,0},
                 {0,2,0,0,0,0,0,0,0,0},

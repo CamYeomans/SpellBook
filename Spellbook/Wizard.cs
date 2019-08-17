@@ -13,7 +13,7 @@ namespace Spellbook
         {
             setFlavortxt("A scholarly magic - user capable of manipulating the structure of reality");
             setSpellcastingAbility("Intelligence");
-            setSpellList("wizard");
+            setSpellList("Wizard");
             int[,] wizardChart = new int[20, 10] {
                 {3,2,0,0,0,0,0,0,0,0},
                 {3,3,0,0,0,0,0,0,0,0},
