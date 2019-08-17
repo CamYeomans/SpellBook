@@ -297,16 +297,18 @@ namespace Spellbook
                 dt.Clear();
                 foreach (Spell spell in completeSpellList.GetSpells())
                 {
-                    
                     if (spell.level <= highestLVLSpell && spell.classes.Contains(playerCharacter.GetCharClass().getSpellList()))
                     {
                         dt.Rows.Add(spell.name, spell.level);
                     }
-                    
                 }
                 dt.AcceptChanges();
             }
         }
 
+        private void spellGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show(completeSpellList.getDescription(spellGrid.SelectedCells[0].Value.ToString()));
+        }
     }
 }

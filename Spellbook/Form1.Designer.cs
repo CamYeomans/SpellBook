@@ -554,6 +554,7 @@
             this.spellGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.spellGrid.Size = new System.Drawing.Size(475, 150);
             this.spellGrid.TabIndex = 27;
+            this.spellGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.spellGrid_CellContentClick);
             // 
             // statsPanel
             // 

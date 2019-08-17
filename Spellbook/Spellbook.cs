@@ -86,6 +86,21 @@ namespace Spellbook
             }
         }
 
+        public string getDescription(string spellName)
+        {
+            string formattedText = "";
+            foreach(Spell spell in spellList)
+            {
+                if(spell.name == spellName)
+                {
+                    formattedText = spellName + "\nLevel: " + spell.level + "\nCasting Time:" + spell.time + "\nRange: " + spell.range +"\nComponents: ";
+                    formattedText = formattedText + spell.components + "\nDuration" + spell.duration + "\nSchool" + spell.school + "\n" + spell.getText() +"\nRoll" + spell.getRoll();
+                }
+                
+            }
+            return formattedText;
+        }
+
         public List<Spell> GetSpells()
         {
             return spellList.ToList();
